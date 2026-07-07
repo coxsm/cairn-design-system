@@ -1,0 +1,36 @@
+/*
+  CAIRN DESIGN SYSTEM — TYPE TOKENS
+  Single family throughout: Inknut Antiqua (the family the brief calls
+  "Inkput Antiqua" — see readme.md Typography note on this substitution).
+  A woodcut serif with heavy, ink-trap-like strokes; used at every weight
+  from body copy up through the display wordmark. No second family.
+*/
+
+:root {
+  --font-serif: "Inknut Antiqua", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* Type scale — print-sheet proportions, not screen/UI proportions */
+  --text-xs: 13px;    /* fine print, table captions */
+  --text-sm: 15px;    /* helper labels, inventory numerals */
+  --text-base: 17px;  /* rules body copy */
+  --text-md: 19px;    /* field values */
+  --text-lg: 23px;    /* section headings (SAVES, COMBAT…) */
+  --text-xl: 29px;    /* block labels (STR / DEX / WIL numerals) */
+  --text-2xl: 40px;   /* panel titles */
+  --text-display: 88px; /* the CAIRN wordmark */
+
+  --leading-tight: 1.1;
+  --leading-heading: 1.25;
+  --leading-body: 1.5;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-header: 0.12em; /* small-caps rule headers */
+}

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Accent — Crimson" subtitle="The system's only accent, reserved exclusively for HP" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  html,body{margin:0;background:var(--surface-page);}
+  *{box-sizing:border-box;font-family:var(--font-serif);}
+  body{display:flex;height:170px;}
+  .sw{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;color:#fff;}
+  .name{font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+  .hex{font-size:12px;opacity:.75;}
+  .use{flex:1.6;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:16px;color:var(--text-muted);font-size:12px;line-height:1.5;}
+  .demo{font-size:26px;font-weight:700;color:var(--accent-hp);}
+  .demo .max{color:var(--ink-300);font-size:20px;font-weight:600;}
+</style></head>
+<body>
+  <div class="sw" style="background:var(--crimson-500)"><span class="name">crimson-500</span><span class="hex">#dc143c</span></div>
+  <div class="sw" style="background:var(--crimson-600)"><span class="name">crimson-600</span><span class="hex">#ab0f2e</span></div>
+  <div class="sw" style="background:var(--crimson-100);color:var(--ink-900);"><span class="name">crimson-100</span><span class="hex">#fadbe1</span></div>
+  <div class="use">
+    <span class="demo">4 <span style="opacity:.6">/</span> <span class="max">6</span></span>
+    <span>--accent-hp paints the HP current value and slash. Nothing else in the system may use it.</span>
+  </div>
+</body></html>

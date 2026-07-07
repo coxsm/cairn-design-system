@@ -1,0 +1,261 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/sheet/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inknut Antiqua))/i]",
+        "message": "Font not provided by the design system. Available: Inknut Antiqua."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ConditionMark'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|checked|showIcon|size|key|ref|className|style|children)$/]",
+        "message": "<ConditionMark> doesn't accept that prop. Declared props: label, checked, showIcon, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CurrencyPanel'] > JSXAttribute > JSXIdentifier[name!=/^(?:gp|sp|cp|size|key|ref|className|style|children)$/]",
+        "message": "<CurrencyPanel> doesn't accept that prop. Declared props: gp, sp, cp, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FieldLine'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|value|area|size|key|ref|className|style|children)$/]",
+        "message": "<FieldLine> doesn't accept that prop. Declared props: label, value, area, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FieldLine'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:base|lg)$/]",
+        "message": "<FieldLine> size must be one of 'base' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|title|style|className|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, title, style, className."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InventoryItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:text|fatigue|key|ref|className|style|children)$/]",
+        "message": "<InventoryItem> doesn't accept that prop. Declared props: text, fatigue."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|size|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: children, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:base|lg)$/]",
+        "message": "<SectionHeading> size must be one of 'base' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SheetPanel'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|padded|key|ref|className|style|children)$/]",
+        "message": "<SheetPanel> doesn't accept that prop. Declared props: children, style, padded."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|value|max|size|split|accent|label|key|ref|className|style|children)$/]",
+        "message": "<StatBadge> doesn't accept that prop. Declared props: icon, value, max, size, split, accent, label."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatBadge'] > JSXAttribute[name.name='accent'] > Literal[value!=/^(?:crimson|)$/]",
+        "message": "<StatBadge> accent must be one of 'crimson' | ''."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ConditionMark": {
+        "replaces": []
+      },
+      "CurrencyPanel": {
+        "replaces": []
+      },
+      "FieldLine": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "InventoryItem": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "SheetPanel": {
+        "replaces": []
+      },
+      "StatBadge": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent-hp",
+      "--border-default",
+      "--border-hairline",
+      "--border-rule",
+      "--crimson-100",
+      "--crimson-500",
+      "--crimson-600",
+      "--focus-ring",
+      "--font-serif",
+      "--ink-150",
+      "--ink-300",
+      "--ink-500",
+      "--ink-700",
+      "--ink-900",
+      "--leading-body",
+      "--leading-heading",
+      "--leading-tight",
+      "--line-hairline",
+      "--line-rule",
+      "--line-strong",
+      "--paper-000",
+      "--paper-050",
+      "--paper-100",
+      "--paper-200",
+      "--radius-md",
+      "--radius-none",
+      "--radius-sm",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--stroke-hairline",
+      "--stroke-heavy",
+      "--stroke-rule",
+      "--surface-inverse",
+      "--surface-page",
+      "--surface-panel",
+      "--surface-raised",
+      "--text-2xl",
+      "--text-base",
+      "--text-display",
+      "--text-inverse",
+      "--text-lg",
+      "--text-md",
+      "--text-muted",
+      "--text-placeholder",
+      "--text-primary",
+      "--text-secondary",
+      "--text-sm",
+      "--text-xl",
+      "--text-xs",
+      "--tracking-header",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--weight-black",
+      "--weight-bold",
+      "--weight-medium",
+      "--weight-regular",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--ink-900": "color",
+      "--ink-700": "color",
+      "--ink-500": "color",
+      "--ink-300": "color",
+      "--ink-150": "color",
+      "--paper-000": "color",
+      "--paper-050": "color",
+      "--paper-100": "color",
+      "--paper-200": "color",
+      "--crimson-500": "color",
+      "--crimson-600": "color",
+      "--crimson-100": "color",
+      "--line-hairline": "color",
+      "--line-rule": "color",
+      "--line-strong": "color",
+      "--surface-page": "color",
+      "--surface-panel": "color",
+      "--surface-raised": "color",
+      "--surface-inverse": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-muted": "font",
+      "--text-placeholder": "font",
+      "--text-inverse": "font",
+      "--border-default": "color",
+      "--border-hairline": "color",
+      "--border-rule": "color",
+      "--accent-hp": "color",
+      "--focus-ring": "color",
+      "--font-serif": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--weight-bold": "font",
+      "--weight-black": "font",
+      "--text-xs": "font",
+      "--text-sm": "font",
+      "--text-base": "font",
+      "--text-md": "font",
+      "--text-lg": "font",
+      "--text-xl": "font",
+      "--text-2xl": "font",
+      "--text-display": "font",
+      "--leading-tight": "font",
+      "--leading-heading": "font",
+      "--leading-body": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-header": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--radius-none": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--stroke-hairline": "color",
+      "--stroke-rule": "color",
+      "--stroke-heavy": "color"
+    },
+    "fontFamilies": [
+      "Inknut Antiqua"
+    ]
+  }
+}

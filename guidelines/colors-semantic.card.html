@@ -1,0 +1,30 @@
+<!-- @dsCard group="Colors" viewport="700x240" name="Semantic Roles" subtitle="How the ramp maps to page / panel / text / border roles" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  html,body{margin:0;}
+  *{box-sizing:border-box;font-family:var(--font-serif);}
+  body{background:var(--surface-page);padding:20px;}
+  .panel{background:var(--surface-raised);border:var(--stroke-rule) solid var(--border-default);padding:16px 20px;}
+  p{margin:0 0 8px;}
+  .primary{color:var(--text-primary);font-weight:var(--weight-bold);font-size:18px;}
+  .secondary{color:var(--text-secondary);font-size:15px;}
+  .muted{color:var(--text-muted);font-size:13px;}
+  .placeholder{color:var(--text-placeholder);font-size:15px;font-style:italic;}
+  .swatchline{display:flex;gap:16px;margin-top:14px;}
+  .tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border:var(--stroke-hairline) solid var(--border-default);}
+</style></head>
+<body>
+  <div class="panel">
+    <p class="primary">text-primary — headings &amp; filled values</p>
+    <p class="secondary">text-secondary — rules-copy body text</p>
+    <p class="muted">text-muted — captions, small labels</p>
+    <p class="placeholder">text-placeholder — unfilled field hint</p>
+  </div>
+  <div class="swatchline">
+    <span class="tag">surface-page</span>
+    <span class="tag" style="background:var(--surface-raised)">surface-raised</span>
+    <span class="tag" style="background:var(--surface-panel)">surface-panel</span>
+    <span class="tag" style="background:var(--surface-inverse);color:var(--text-inverse);">surface-inverse</span>
+  </div>
+</body></html>

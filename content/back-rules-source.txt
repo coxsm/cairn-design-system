@@ -1,0 +1,60 @@
+SOURCE: Verbatim text extracted from uploads/Cairn printout BACK.pdf
+Used as the fixed "Rules Summary" reference content on the character sheet template (back side).
+Column order preserved (sheet is set in two printed columns).
+
+--- COLUMN 1 ---
+
+STR: Brawn, prowess & resistance. 0 = Death.
+
+DEX: Dodging, sneaking & reflexes. 0 = Paralysis.
+
+WIL: Persuasion, intimidation & magic. 0 = Delirium.
+
+
+SAVES
+
+Roll a d20 equal to or under an ability.
+
+1 is always a success, 20 is always a failure.
+
+
+COMBAT
+
+Initiative begins with a DEX save — those who succeed act before the enemies, then turns alternate back and forth. The lowest roll goes first, then clockwise around the table.
+
+Attacks always hit. When hit with damage, subtract your Armor, and apply the remainder to your HP, then STR if HP reaches 0.
+
+--- COLUMN 2 ---
+
+ACTIONS
+
+On your turn, a character may move up to 40ft and take up to one action. Actions may include casting a spell, attacking, making a second move, or other reasonable activities. Drinking a potion is a free action.
+
+
+HEALING
+
+HP is lost during combat & recovered instantly after combat ends.
+
+STR takes healing potions, spells, or time to recover.
+
+
+INVENTORY
+
+PCs have 10 inventory slots. Most items take up a one slot, but smaller items can be bundled together. Bulky items take up two slots and are awkward or difficult to carry.
+
+
+SPELLBOOKS
+
+Anyone can cast a spell with a WIL save. If you fail, the spell works but you gain 1 Fatigue (takes up an inventory slot). Spellbooks each hold one spell and take up one slot.
+
+
+--- FOOTER STRIP ---
+(NOTE: per user-supplied screenshot, this strip actually sits MID-COLUMN — a light-gray rounded bar between COMBAT and ACTIONS, not a page footer. All rules occupy the LEFT of two ruled columns; the right column is blank.)
+
+Damage → Armor → HP → STR
+
+
+--- NOTES ON FRONT PAGE (from PDF raster/vector inspection, pdfjs) ---
+- FRONT page is almost entirely hand-drawn vector line art + 6 embedded raster icon illustrations (woodcut/scratchboard style, pure black on white): Armor (shield+chain), HP (anatomical heart, dripping), STR (clenched fist), DEX (upward arrow), WIL (radiating starburst), Coin (profile bust in laurel wreath, with GP/SP/CP tally lines to the right baked into the same illustration).
+- A 7th icon, Deprived (a kneeling, hooded, exhausted figure leaning on a sword under a radiating moon/star) was supplied separately as an SVG and matches the same illustration style; it corresponds to the game's "Deprived" condition (lacking food/water/rest), described in the SRD but represented as a single icon/checkbox on the sheet rather than a raster in the PDF's image XObjects (likely drawn with vector paths directly, or placed differently) — confirmed present as its own uploaded SVG asset.
+- FRONT page text layer is extremely sparse (only 12 short glyph runs, vs. dozens of vector path fills for border/box art) — consistent with a mostly-graphical fillable form: character name/description fields, STR/DEX/WIL score boxes, HP/Armor boxes, Coin tally, a 10-slot inventory grid, and blank space for notes, bonds, and background — matching the standard Cairn character-creation fields (STR/DEX/WIL via 3d6, starting HP via 1d6, 10 inventory slots: backpack six + two hands + two upper body, GP/SP/CP coinage). Exact box pixel coordinates could not be recovered (PDF has no text layer / form fields, and in-browser rasterization of this PDF timed out in this tool), so the template below is a faithful, from-first-principles reconstruction of the same sections/fields and visual system — not a pixel-traced copy. Flagged to user for correction.

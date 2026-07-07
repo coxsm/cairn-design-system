@@ -1,0 +1,48 @@
+/*
+  CAIRN DESIGN SYSTEM — WEBFONT DECLARATIONS
+  Self-hosted Inknut Antiqua (see readme.md for the "Inkput Antiqua" naming
+  note). Files copied from Google Fonts (SIL Open Font License) into
+  assets/fonts/. Five static weights covers every use on the sheet —
+  the family has no italics, which is fine: none of the source material
+  uses italic type.
+*/
+
+@font-face {
+  font-family: "Inknut Antiqua";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/InknutAntiqua-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inknut Antiqua";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/InknutAntiqua-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inknut Antiqua";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/InknutAntiqua-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inknut Antiqua";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/InknutAntiqua-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inknut Antiqua";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../assets/fonts/InknutAntiqua-900.woff2") format("woff2");
+}

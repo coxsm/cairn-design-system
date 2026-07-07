@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Panels & Borders" subtitle="1px gray rules, slight rounding, inward nicks — zero shadow" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  html,body{margin:0;background:var(--surface-page);}
+  *{box-sizing:border-box;font-family:var(--font-serif);}
+  body{padding:22px;display:flex;gap:20px;align-items:flex-start;}
+  .panel{position:relative;border:var(--stroke-hairline) solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-raised);padding:14px 16px;width:230px;}
+  .panel h4{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-muted);}
+  .panel p{margin:0;font-size:12px;color:var(--text-secondary);line-height:1.5;}
+  .tick{position:absolute;left:-3px;width:5px;height:5px;transform:rotate(45deg);background:var(--surface-page);}
+  .box{position:absolute;top:8px;right:8px;width:12px;height:12px;border:1px solid var(--border-default);border-radius:2px;background:var(--surface-raised);}
+  .note{font-size:12px;color:var(--text-muted);max-width:300px;line-height:1.6;}
+</style></head>
+<body>
+  <div class="panel">
+    <span class="tick" style="top:10px;border-top:1px solid var(--ink-300);border-right:1px solid var(--ink-300);"></span>
+    <span class="tick" style="bottom:10px;border-top:1px solid var(--ink-300);border-right:1px solid var(--ink-300);"></span>
+    <span class="box"></span>
+    <h4>Slot</h4>
+    <p>1px gray border, white fill, --radius-sm, edge nicks indenting inward, fatigue tickbox upper-right. No drop shadow.</p>
+  </div>
+  <p class="note">Every box on the sheet — name bar, inventory rows, stat boxes, notes panel, rules frame — is a thin gray rule with slight rounding (--radius-sm for rows/boxes, --radius-md for large panels). Containment is drawn with a fine pen, never simulated with light. <strong>Nick rule:</strong> edge nicks always indent <em>inward toward the card</em> — both pointing right on a left edge (inventory rows), both pointing down on a top edge (stat boxes). Large panels use diamond notches at top/bottom center instead.</p>
+</body></html>

@@ -1,0 +1,28 @@
+/*
+  CAIRN DESIGN SYSTEM — SPACING, RADIUS & LINE-WEIGHT TOKENS
+  Delicate print-form aesthetic: thin gray borders with a slight corner
+  rounding on boxes. "Grit" comes from the ink linework of the icon
+  illustrations, not from shadow/blur — there are no shadow tokens.
+*/
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Radius: boxes on the sheet round very slightly; bars a touch less. */
+  --radius-none: 0px;
+  --radius-sm: 6px;    /* inventory rows, stat boxes, name bar */
+  --radius-md: 10px;   /* notes panel, full-page rules frame */
+
+  /* Ink line-weights used for borders/rules throughout the sheet */
+  --stroke-hairline: 1px;  /* the default — nearly every box and divider */
+  --stroke-rule: 2px;      /* emphasis rules */
+  --stroke-heavy: 3px;     /* rare — outer frame emphasis only */
+}

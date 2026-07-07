@@ -1,0 +1,52 @@
+/*
+  CAIRN DESIGN SYSTEM — COLOR TOKENS
+  Neutral monochrome: black ink through gray on pure white — no warm paper
+  tint (per source printout). One accent exists in the whole system:
+  a vibrant crimson, reserved exclusively for HP.
+  Base ramps first, semantic aliases below reference the ramps.
+*/
+
+:root {
+  /* ---- Base ramp: ink (neutral near-black, never pure #000) ---- */
+  --ink-900: #0c0c0c;   /* maximum ink — matches the fill value baked into the source icon art */
+  --ink-700: #2b2b2b;   /* secondary ink — long-form body text, dark backdrop */
+  --ink-500: #6f6f6f;   /* muted ink — captions, section labels (Hands, Notes…) */
+  --ink-300: #a3a3a3;   /* faint ink — box borders, corner ticks */
+  --ink-150: #cfcfcf;   /* hairline ink — dividers, empty slash marks, placeholder text */
+
+  /* ---- Base ramp: surface (pure white page, gray fills) ---- */
+  --paper-000: #ffffff;  /* the page and every panel */
+  --paper-050: #f6f6f6;  /* subtle recessed fill */
+  --paper-100: #e9e9e9;  /* filled bars — Name bar, "Damage → Armor → HP → STR" strip */
+  --paper-200: #d9d9d9;  /* deepest gray fill — pressed / filled states */
+
+  /* ---- Accent: crimson — HP only ---- */
+  --crimson-500: #dc143c; /* vibrant crimson — HP current value & slash */
+  --crimson-600: #ab0f2e; /* darker press/print variant */
+  --crimson-100: #fadbe1; /* faint tint, if a fill is ever needed */
+
+  /* ---- Structural lines ---- */
+  --line-hairline: var(--ink-150);
+  --line-rule:     var(--ink-500);
+  --line-strong:   var(--ink-900);
+
+  /* ================= Semantic aliases ================= */
+  --surface-page:    var(--paper-000);
+  --surface-panel:   var(--paper-100);
+  --surface-raised:  var(--paper-000);
+  --surface-inverse: var(--ink-900);
+
+  --text-primary:     var(--ink-900);
+  --text-secondary:   var(--ink-700);
+  --text-muted:       var(--ink-500);
+  --text-placeholder: var(--ink-150);
+  --text-inverse:     var(--paper-000);
+
+  --border-default:  var(--ink-300);
+  --border-hairline: var(--line-hairline);
+  --border-rule:     var(--line-rule);
+
+  --accent-hp: var(--crimson-500);
+
+  --focus-ring: var(--ink-900);
+}

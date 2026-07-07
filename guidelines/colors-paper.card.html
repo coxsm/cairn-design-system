@@ -1,0 +1,20 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Surface Grays" subtitle="Pure white page with neutral gray fills — no warm paper tint" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  html,body{margin:0;}
+  *{box-sizing:border-box;}
+  .row{display:flex;height:170px;}
+  .sw{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;font-family:var(--font-serif);color:var(--ink-900);border-right:1px solid var(--ink-150);}
+  .sw:last-child{border-right:none;}
+  .name{font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+  .hex{font-size:12px;opacity:.65;}
+</style></head>
+<body>
+  <div class="row">
+    <div class="sw" style="background:var(--paper-000)"><span class="name">paper-000</span><span class="hex">#ffffff</span></div>
+    <div class="sw" style="background:var(--paper-050)"><span class="name">paper-050</span><span class="hex">#f6f6f6</span></div>
+    <div class="sw" style="background:var(--paper-100)"><span class="name">paper-100</span><span class="hex">#e9e9e9</span></div>
+    <div class="sw" style="background:var(--paper-200)"><span class="name">paper-200</span><span class="hex">#d9d9d9</span></div>
+  </div>
+</body></html>

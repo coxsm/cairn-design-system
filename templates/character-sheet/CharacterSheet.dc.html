@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Character Sheet" description="Two-page Cairn character sheet — fillable front, fixed Rules Summary back." -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <style>
+    html, body { margin: 0; background: var(--ink-700, #2b2b2b); }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="padding:48px 24px; font-family:var(--font-serif);">
+
+  <!-- ============ FRONT — CHARACTER ============ -->
+  <div style="width:850px; margin:0 auto 14px; text-align:center; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8f8f8f;">Front — Blank Template</div>
+  <div data-screen-label="Front — Blank Template" style="position:relative; width:850px; height:1100px; margin:0 auto 48px; background:var(--surface-page); padding:26px; display:flex; gap:22px; overflow:hidden;">
+
+    <!-- LEFT column: name, inventory, notes -->
+    <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:12px;">
+
+      <!-- Name bar -->
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface-panel); border-radius:var(--radius-sm); padding:10px 16px; min-height:48px; flex:0 0 auto;">
+        <div style="font-weight:700; font-size:20px; line-height:1.2; color:var(--ink-150); flex:1; min-width:0;">Name</div>
+        <x-import component-from-global-scope="CairnDesignSystem_b44824.ConditionMark" hint-size="110px,22px"></x-import>
+      </div>
+
+      <!-- Inventory: Hands -->
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Hands</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <!-- Inventory: Body -->
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Body</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <!-- Inventory: Backpack — one connected section, three rows -->
+      <div style="position:relative; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); flex:0 0 auto;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Backpack</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <!-- Notes -->
+      <div style="position:relative; flex:1; min-height:0; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+        <div style="position:absolute; top:12px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Notes</div>
+        <div style="position:absolute; left:50%; top:44px; bottom:20px; width:1px; background:var(--border-hairline);"></div>
+        <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <div style="position:absolute; top:40px; left:14px; right:calc(50% + 14px); bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden;"></div>
+        <div style="position:absolute; top:40px; left:calc(50% + 14px); right:14px; bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden;"></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT rail: Armor, HP, STR, DEX, WIL, Coin -->
+    <div style="width:150px; flex:0 0 auto; display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="armor" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="hp" split="true" accent="crimson" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="str" split="true" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="dex" split="true" size="74" hint-size="150px,148px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="wil" split="true" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="coin" size="72" hint-size="150px,146px"></x-import>
+    </div>
+
+  </div>
+
+  <!-- ============ BACK — RULES SUMMARY ============ -->
+  <div style="width:850px; margin:0 auto 14px; text-align:center; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8f8f8f;">Back — Rules Summary</div>
+  <div data-screen-label="Back — Rules Summary" style="position:relative; width:850px; height:1100px; margin:0 auto 48px; background:var(--surface-page); padding:24px; overflow:hidden;">
+    <div style="position:relative; width:100%; height:100%; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+
+      <div style="position:absolute; left:50%; top:24px; bottom:24px; width:1px; background:var(--border-hairline);"></div>
+      <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+      <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+
+      <div style="position:absolute; top:28px; left:28px; bottom:28px; width:calc(50% - 52px); font-size:10px; line-height:1.6; color:var(--text-secondary); overflow:hidden;">
+
+        <p style="margin:0;"><strong style="color:var(--text-primary);">STR:</strong> Brawn, prowess &amp; resistance. <strong style="color:var(--text-primary);">0 = Death.</strong></p>
+        <p style="margin:0;"><strong style="color:var(--text-primary);">DEX:</strong> Dodging, sneaking &amp; reflexes. <strong style="color:var(--text-primary);">0 = Paralysis.</strong></p>
+        <p style="margin:0 0 14px;"><strong style="color:var(--text-primary);">WIL:</strong> Persuasion, intimidation &amp; magic. <strong style="color:var(--text-primary);">0 = Delirium.</strong></p>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">SAVES</div>
+        <div style="margin:0 0 14px; display:flex; flex-direction:column; gap:3px;">
+          <div style="display:flex; gap:7px;"><span style="flex:0 0 auto;">&bull;</span><span>Roll a d20 equal to or under an ability.</span></div>
+          <div style="display:flex; gap:7px;"><span style="flex:0 0 auto;">&bull;</span><span>1 is always a success, 20 is always a failure.</span></div>
+        </div>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">COMBAT</div>
+        <p style="margin:0 0 12px;">Initiative begins with a <strong style="color:var(--text-primary);">DEX save</strong> — those who succeed act before the enemies, then turns alternate back and forth. The lowest roll goes first, then clockwise around the table.</p>
+        <p style="margin:0;">Attacks always hit. When hit with damage, subtract your <strong style="color:var(--text-primary);">Armor</strong>, and apply the remainder to your <strong style="color:var(--text-primary);">HP</strong>, then <strong style="color:var(--text-primary);">STR</strong> if <strong style="color:var(--text-primary);">HP</strong> reaches 0.</p>
+
+        <div style="background:var(--surface-panel); border-radius:4px; text-align:center; font-weight:700; font-size:11px; color:var(--text-primary); padding:6px 12px; margin:16px 0;">Damage &rarr; Armor &rarr; HP &rarr; STR</div>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">ACTIONS</div>
+        <p style="margin:0 0 14px;">On your turn, a character may move up to 40ft and take up to one action. Actions may include casting a spell, attacking, making a second move, or other reasonable activities. Drinking a potion is a free action.</p>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">HEALING</div>
+        <div style="margin:0 0 14px; display:flex; flex-direction:column; gap:3px;">
+          <div style="display:flex; gap:7px;"><span style="flex:0 0 auto;">&bull;</span><span><strong style="color:var(--text-primary);">HP</strong> is lost during combat &amp; recovered instantly after combat ends.</span></div>
+          <div style="display:flex; gap:7px;"><span style="flex:0 0 auto;">&bull;</span><span><strong style="color:var(--text-primary);">STR</strong> takes healing potions, spells, or time to recover.</span></div>
+        </div>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">INVENTORY</div>
+        <p style="margin:0 0 14px;">PCs have 10 inventory slots. Most items take up a one slot, but smaller items can be bundled together. <strong style="color:var(--text-primary);">Bulky</strong> items take up two slots and are awkward or difficult to carry.</p>
+
+        <div style="font-weight:700; font-size:10px; letter-spacing:.04em; color:var(--text-primary); margin:0 0 4px;">SPELLBOOKS</div>
+        <p style="margin:0;">Anyone can cast a spell with a <strong style="color:var(--text-primary);">WIL save</strong>. If you fail, the spell works but you gain <strong style="color:var(--text-primary);">1 Fatigue</strong> (takes up an inventory slot). Spellbooks each hold one spell and take up one slot.</p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ FRONT — FILLED EXAMPLE ============ -->
+  <div style="width:850px; margin:0 auto 14px; text-align:center; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8f8f8f;">Example — Filled Character</div>
+  <div data-screen-label="Front — Filled Example" style="position:relative; width:850px; height:1100px; margin:0 auto 48px; background:var(--surface-page); padding:26px; display:flex; gap:22px; overflow:hidden;">
+
+    <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:12px;">
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface-panel); border-radius:var(--radius-sm); padding:10px 16px; min-height:48px; flex:0 0 auto;">
+        <div style="font-weight:700; font-size:20px; line-height:1.2; color:var(--text-primary); flex:1; min-width:0;">Prism</div>
+        <x-import component-from-global-scope="CairnDesignSystem_b44824.ConditionMark" hint-size="110px,22px"></x-import>
+      </div>
+
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Hands</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Needle-Knife (d6)</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Lantern</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Body</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Protective Gloves</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Traveler's Cloak</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); flex:0 0 auto;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Backpack</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Rations (3 uses)</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Oil Can (6 uses)</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Rope, 25ft</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Spellbook: Charm Person</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Whetstone</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;">Tin of Snuff (6 uses)</div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; flex:1; min-height:0; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+        <div style="position:absolute; top:12px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Notes</div>
+        <div style="position:absolute; left:50%; top:44px; bottom:20px; width:1px; background:var(--border-hairline);"></div>
+        <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <div style="position:absolute; top:40px; left:14px; right:calc(50% + 14px); bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden; overflow-wrap:break-word; word-break:break-word;">Background: Aurifex — an alchemist who bends workshop magic to unusual ends. Starting kit: rations, a lantern, an oil can, a needle-knife, and protective gloves.</div>
+        <div style="position:absolute; top:40px; left:calc(50% + 14px); right:14px; bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden; overflow-wrap:break-word; word-break:break-word;">A workshop mishap burned away their sense of smell — mostly. They can now sniff out gold like a hog after truffles, and keep a tin of snuff on hand to dull the side effects.</div>
+      </div>
+
+    </div>
+
+    <div style="width:150px; flex:0 0 auto; display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="armor" value="0" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="hp" split="true" accent="crimson" value="6" max="6" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="str" split="true" value="10" max="10" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="dex" split="true" value="13" max="13" size="74" hint-size="150px,148px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="wil" split="true" value="8" max="8" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="coin" value="11" size="72" hint-size="150px,146px"></x-import>
+    </div>
+
+  </div>
+
+  <!-- ============ FRONT — PENCIL EXAMPLE ============ -->
+  <div style="width:850px; margin:0 auto 14px; text-align:center; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8f8f8f;">Example — Pencil (Predetermined Max)</div>
+  <div data-screen-label="Front — Pencil Example" style="position:relative; width:850px; height:1100px; margin:0 auto 48px; background:var(--surface-page); padding:26px; display:flex; gap:22px; overflow:hidden;">
+
+    <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:12px;">
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface-panel); border-radius:var(--radius-sm); padding:10px 16px; min-height:48px; flex:0 0 auto;">
+        <div style="font-weight:700; font-size:20px; line-height:1.2; color:var(--ink-150); flex:1; min-width:0;">Name</div>
+        <x-import component-from-global-scope="CairnDesignSystem_b44824.ConditionMark" hint-size="110px,22px"></x-import>
+      </div>
+
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Hands</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Body</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); flex:0 0 auto;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px;">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Backpack</div>
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+        <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+          <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+        </div>
+        </div>
+        <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+        <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      </div>
+
+      <div style="position:relative; flex:1; min-height:0; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+        <div style="position:absolute; top:12px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Notes</div>
+        <div style="position:absolute; left:50%; top:44px; bottom:20px; width:1px; background:var(--border-hairline);"></div>
+        <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+        <div style="position:absolute; top:40px; left:14px; right:calc(50% + 14px); bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden;"></div>
+        <div style="position:absolute; top:40px; left:calc(50% + 14px); right:14px; bottom:16px; font-size:11px; line-height:1.6; color:var(--text-primary); overflow:hidden;"></div>
+      </div>
+
+    </div>
+
+    <div style="width:150px; flex:0 0 auto; display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="armor" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="hp" split="true" accent="crimson" max="6" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="str" split="true" max="14" size="70" hint-size="150px,146px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="dex" split="true" max="9" size="74" hint-size="150px,148px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="wil" split="true" max="12" size="78" hint-size="150px,152px"></x-import>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="coin" size="72" hint-size="150px,146px"></x-import>
+    </div>
+
+  </div>
+
+  <!-- ============ ALTERNATE BACK — BLANK (NO RULES) ============ -->
+  <div style="width:850px; margin:0 auto 14px; text-align:center; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8f8f8f;">Alternate Back — Blank (No Rules)</div>
+  <div data-screen-label="Back — Blank (No Rules)" style="position:relative; width:850px; height:1100px; margin:0 auto; background:var(--surface-page); padding:24px; overflow:hidden;">
+    <div style="position:relative; width:100%; height:100%; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+      <div style="position:absolute; left:50%; top:24px; bottom:24px; width:1px; background:var(--border-hairline);"></div>
+      <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+      <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>
