@@ -163,9 +163,48 @@ html, body {
   background: var(--paper-050);
 }
 
+.sheet-editable [contenteditable]:focus {
+  outline: 1px solid var(--ink-300);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.stat-inputs .stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 10px;
+}
+
+.stat-inputs label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.stat-inputs input {
+  width: 42px;
+  font-family: inherit;
+  font-size: 11px;
+  padding: 4px 6px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  text-align: center;
+}
+
 @media print {
   html, body { background: #fff !important; }
   .floating-controls { display: none !important; }
+  .stat-inputs { display: none !important; }
+  .sheet-editable [contenteditable]:focus { outline: none; }
   .print-sheet {
     margin: 0 !important;
     width: 8.5in !important;

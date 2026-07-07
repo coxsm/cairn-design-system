@@ -54,7 +54,7 @@ function isPetty(item) {
 }
 
 function isBulky(item) {
-  return /\(\s*bulky\s*\)/i.test(item);
+  return /\bbulky\b/i.test(item);
 }
 
 function isGoldLine(item) {
@@ -89,17 +89,80 @@ function extractBoldItems(text) {
   return items;
 }
 
+function extractGearFromText(text) {
+  const fromBold = extractBoldItems(text);
+  if (fromBold.length) return fromBold;
+
+  const items = [];
+  const re =
+    /(?:take|carry|start with|wield|and)\s+(?:an?\s+)?([^(,.]+?)\s*\(([^)]*(?:d\d+|Armor|bulky|petty|uses|slow|slots)[^)]*)\)/gi;
+  let m;
+  while ((m = re.exec(text))) {
+    const label = m[1].trim();
+    const tags = m[2].trim();
+    if (label) items.push(`${label} (${tags})`);
+  }
+  return items;
+}
+
 function isWeapon(item) {
-  return /\bd\d+\b/i.test(item) || /\b(sword|hammer|axe|bow|crossbow|dagger|knife|stake|chains)\b/i.test(item);
+  return (
+    /\bshield\b/i.test(item) ||
+    /\bd\d+\b/i.test(item) ||
+    /\b(sword|hammer|axe|bow|crossbow|dagger|knife|stake|spear|mace|flail|saw|pike|staff|club|blade|cutlass|rapier)\b/i.test(item)
+  );
 }
 
 function isArmor(item) {
-  return /\+\s*\d+\s*Armor/i.test(item) || /\b(armor|gambeson|helm|mail|shield)\b/i.test(item);
+  return (
+    /\+\s*\d+\s*Armor/i.test(item) ||
+    /\b(armor|gambeson|helm|mail|cuirass|breastplate|brigandine)\b/i.test(item)
+  );
+}
+
+function isClothing(item) {
+  return /\b(gloves|cloak|coat|boots|hat|mask|robes|tunic|vest|leathers|sandals|shoes|hood|cape|wraps|bandages|gown)\b/i.test(
+    item
+  );
+}
+
+function isAmulet(item) {
+  return /\b(amulet|locket|necklace|ring|signet|medallion|charm|talisman|brooch|pendant)\b/i.test(
+    item
+  );
+}
+
+function isBodyWear(item) {
+  return isArmor(item) || isClothing(item) || isAmulet(item);
 }
 
 function armorValue(item) {
   const m = item.match(/\+\s*(\d+)\s*Armor/i);
-  return m ? Number(m[1]) : /\bshield\b/i.test(item) ? 1 : 0;
+  if (m) return Number(m[1]);
+  if (/\b(helm|mail|gambeson|cuirass|breastplate|brigandine)\b/i.test(item)) return 1;
+  return 0;
+}
+
+function placeInRegion(slots, start, end, items) {
+  const overflow = [];
+  for (const item of items) {
+    const need = item.bulky ? 2 : 1;
+    let placed = false;
+    for (let pos = start; pos < end && !placed; pos++) {
+      if (slots[pos] !== "") continue;
+      if (need === 2) {
+        if (pos + 1 >= end || slots[pos + 1] !== "") continue;
+        slots[pos] = item.label;
+        slots[pos + 1] = null;
+        placed = true;
+      } else {
+        slots[pos] = item.label;
+        placed = true;
+      }
+    }
+    if (!placed) overflow.push(item);
+  }
+  return overflow;
 }
 
 function hpBonusFromText(text, rng) {
@@ -193,7 +256,7 @@ export function mapInventory(background, tableResults, rng = Math.random) {
   for (const tr of tableResults) {
     const gp = tr.text.match(/take\s+(?:an?\s+)?extra\s+(\d+)\s*gp/i);
     if (gp) extraGold += Number(gp[1]);
-    for (const item of extractBoldItems(tr.text)) {
+    for (const item of extractGearFromText(tr.text)) {
       if (isPetty(item)) {
         petty.push(cleanItemLabel(item));
         continue;
@@ -206,46 +269,45 @@ export function mapInventory(background, tableResults, rng = Math.random) {
     }
   }
 
-  const weapons = candidates.filter((c) => isWeapon(c.label));
-  const armors = candidates.filter((c) => isArmor(c.label));
-  const rest = candidates.filter((c) => !isWeapon(c.label) && !isArmor(c.label));
+  const weapons = [];
+  const bodyWear = [];
+  const general = [];
 
-  for (const a of armors) {
-    armor = Math.max(armor, armorValue(a.label));
+  for (const c of candidates) {
+    if (isWeapon(c.label)) weapons.push(c);
+    else if (isBodyWear(c.label)) bodyWear.push(c);
+    else general.push(c);
   }
 
-  let slot = 0;
+  weapons.sort((a, b) => {
+    if (a.bulky !== b.bulky) return Number(b.bulky) - Number(a.bulky);
+    if (a.source !== b.source) return a.source === "table" ? -1 : 1;
+    return 0;
+  });
 
-  function place(label, bulky = false) {
-    const need = bulky ? 2 : 1;
-    while (slot + need <= 2 && need === 2) slot = 2;
-    if (slot + need > 10) return false;
-    slots[slot] = label;
-    if (bulky && slot + 1 < 10) slots[slot + 1] = "";
-    slot += need;
-    return true;
+  for (const item of bodyWear) {
+    armor = Math.max(armor, armorValue(item.label));
   }
 
-  for (const w of weapons) {
-    if (!place(w.label, w.bulky)) petty.push(w.label);
+  let overflow = placeInRegion(slots, 0, 2, weapons);
+  const weaponOverflow = overflow;
+  overflow = placeInRegion(slots, 2, 4, bodyWear);
+  overflow = placeInRegion(slots, 4, 10, general.concat(weaponOverflow, overflow));
+
+  for (const item of overflow) {
+    petty.push(item.label);
   }
 
-  for (const a of armors) {
-    if (!place(a.label, a.bulky)) petty.push(a.label);
-  }
-
-  for (const item of rest) {
-    if (!place(item.label, item.bulky)) petty.push(item.label);
-  }
+  const normalized = slots.map((s) => (s == null ? "" : s));
 
   return {
-    slots,
+    slots: normalized,
     petty,
     armor,
     extraGold,
-    hands: slots.slice(0, 2),
-    body: slots.slice(2, 4),
-    backpack: slots.slice(4, 10),
+    hands: normalized.slice(0, 2),
+    body: normalized.slice(2, 4),
+    backpack: normalized.slice(4, 10),
   };
 }
 

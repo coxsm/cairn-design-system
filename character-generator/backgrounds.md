@@ -54,8 +54,8 @@ Every background page follows this shape — use it to know what to expect when 
 The repo ships a static GitHub Pages site (`site/` → built to `docs/`):
 
 - **Live:** [https://coxsm.github.io/cairn-design-system/](https://coxsm.github.io/cairn-design-system/)
-- **Refresh** rolls a new character in **Filled** and **Max stats** modes; **Blank** stays empty.
-- **Floating panel** (screen only): Filled | Blank | Max stats; notes pages 0–2 for overflow Bond/spell notes.
+- **Refresh** rolls a new character in **Filled** and **Max stats** modes; **Blank** stays empty. All fields are editable before printing.
+- **Floating panel** (screen only): Filled | Blank | Max stats; notes pages 0–1 for overflow Bond/spell notes; stat inputs for quick edits.
 - **Print:** Ctrl+P manually — no auto-print. Floating controls are hidden in print/PDF.
 - **Rebuild data:** `node scripts/fetch-character-data.mjs` then `node scripts/build-site.mjs`.
 
@@ -73,9 +73,9 @@ Generated characters are **single-page, print-ready PDF exports** — not design
 Duplicate `templates/character-sheet/CharacterPrint.dc.html` and fill in:
 
 - **Name bar** → chosen/rolled name.
-- **Hands** (2 slots) → weapon + shield/offhand from Starting Gear.
-- **Body** (2 slots) → armor + a clothing item.
-- **Backpack** (6 slots) → remaining gear, background-table results, and any Fatigue (writes "Fatigue" into a slot with its tickbox filled).
+- **Hands** (2 slots) → weapons and shields.
+- **Body** (2 slots) → armor, clothing, and amulets/jewelry.
+- **Backpack** (6 slots) → remaining gear, background-table items, and any Fatigue (writes "Fatigue" into a slot with its tickbox filled).
 - **Right rail**: STR / DEX / WIL as `split` StatBadges with `value` = current, `max` = the rolled score (start current = max); HP the same, current = max = rolled 1d6, `accent="crimson"`; Armor = a plain (non-split) value from worn armor; Coin = plain value in gp (convert sp/cp if needed, or add a line to Notes).
 - **Notes** → spellbooks, potions, background quirk-table results, Bond, and petty items that don't take slots. Format each section as its own block with a **bold label** and a line break before the body text — use `<p class="note-block"><strong>Label:</strong><br>…</p>` inside each Notes column. Typical left column: Background, Traits. Typical right column: Trade, Escape (or other d6 table results), Bond, Petty. Never run sections together in one paragraph.
 
