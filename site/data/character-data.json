@@ -1,0 +1,2225 @@
+{
+  "version": 1,
+  "source": "https://cairnrpg.com/second-edition/",
+  "license": "CC-BY-SA 4.0",
+  "backgrounds": [
+    {
+      "name": "Aurifex",
+      "slug": "aurifex",
+      "flavor": "You are an artisan of the arcane, a smith of subtle forces. In the crucible of your workshop, the laws that govern this world are warped to suit your needs.",
+      "names": [
+        "Hestia",
+        "Basil",
+        "Rune",
+        "Prism",
+        "Ember",
+        "Quintess",
+        "Aludel",
+        "Mordant",
+        "Salaman",
+        "Jazia"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Lantern",
+        "Oil Can (6 uses)",
+        "Needle-knife (d6)",
+        "Protective Gloves (petty)"
+      ],
+      "tables": [
+        {
+          "title": "What went horribly wrong?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "There was an explosion, and you lost your sense of smell. Well, almost: you can sniff out gold as a pig does truffles. Take a Tin of Snuff (6 uses) to dampen the impact. Use it every day or become deprived."
+            },
+            {
+              "roll": 2,
+              "text": "You dematerialized a beloved pet. Now it follows you around, invisible but always present. Although it cannot interact with the physical realm, you are able to share its senses. (Add a Fatigue each time.) It follows basic commands."
+            },
+            {
+              "roll": 3,
+              "text": "You were exposed to a long-acting truth serum whose effects have yet to wear off. The disorder has its advantages: you cannot repeat lies you’ve heard, either."
+            },
+            {
+              "roll": 4,
+              "text": "You were adept at creating fake gold, which is almost as good. Eventually, your ruse was discovered, and you had to make a hasty retreat. Take a heavy Metal Ingot and Gold Powder (3 uses)."
+            },
+            {
+              "roll": 5,
+              "text": "Your alchemical recipe worked, but a rival stole the blueprint before your claims could be proven. Take a prototype Blunderbuss (d12, blast, bulky) that takes one round to reload, and a taste for revenge."
+            },
+            {
+              "roll": 6,
+              "text": "Ridiculed for discovering how to turn gold into lead, you were a laughing stock. Take a bottle of Universal Solvent (2 uses) that dissolves anything it touches into its constituent parts."
+            }
+          ]
+        },
+        {
+          "title": "What alchemical marvel is the product of your latest ingenuity?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Pyrophoric Gel"
+            },
+            {
+              "roll": 2,
+              "text": "Blast Sphere"
+            },
+            {
+              "roll": 3,
+              "text": "Aqua Vita"
+            },
+            {
+              "roll": 4,
+              "text": "Mimic Stone"
+            },
+            {
+              "roll": 5,
+              "text": "Spark Dust"
+            },
+            {
+              "roll": 6,
+              "text": "Homunculus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barber-Surgeon",
+      "slug": "barber-surgeon",
+      "flavor": "You walk the line between healer and harrower, knowing the frailty of the flesh but also the secrets that lie within. With the right tools, life and death are merely words.",
+      "names": [
+        "Wilmot",
+        "Patch",
+        "Lancet",
+        "Sawbones",
+        "Theo",
+        "Cutwell",
+        "Humor",
+        "Landsford",
+        "Goodeye",
+        "Johanna"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Bonesaw (d6)",
+        "Bandages (3 uses)",
+        "Leech (restores 1 STR, 3 uses)",
+        "Stained Medical Finery (petty)"
+      ],
+      "tables": [
+        {
+          "title": "How have you “improved” yourself?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "You have a replacement eye that can magnify objects, act as a telescope, and provide minimal night vision. You cannot wear anything metal on your head, and the presence of strong magnets make you deprived."
+            },
+            {
+              "roll": 2,
+              "text": "One foot is mostly metal (kick, d6), and you treat some Tough terrain as Easy. Carry a Oil Can (6 uses). Without a daily application, you are deprived and noisy."
+            },
+            {
+              "roll": 3,
+              "text": "One of your fingers has been swapped, the bone replaced by gold and iron. Take a Hook and a Screwdriver that can attach to the fingertip."
+            },
+            {
+              "roll": 4,
+              "text": "Both ears have been surgically enhanced, tripling your hearing. You can focus on a specific sound, such as a conversation, at a great distance. You wear an ear flap to protect against sudden loud noises (WIL save to avoid temporary paralysis)."
+            },
+            {
+              "roll": 5,
+              "text": "Your chest is lined with alchemical sigils, toughening the skin (1 Armor). Wearing other metallic armor nullifies the effect."
+            },
+            {
+              "roll": 6,
+              "text": "One arm is fully metal and comes off at the shoulder. It can be used as a weapon (d8, bulky when not attached) and can move independently if you are within sight of it."
+            }
+          ]
+        },
+        {
+          "title": "What rare tool is essential to your work?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Regrowth Salve"
+            },
+            {
+              "roll": 2,
+              "text": "Graftgrub"
+            },
+            {
+              "roll": 3,
+              "text": "Woundwax"
+            },
+            {
+              "roll": 4,
+              "text": "Quicksilver"
+            },
+            {
+              "roll": 5,
+              "text": "Pneuma Pump"
+            },
+            {
+              "roll": 6,
+              "text": "Lodestone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beast Handler",
+      "slug": "beast-handler",
+      "flavor": "You alone can walk among the creatures of the wild, fearless and in control. You share a connection with animals that others can only dream of… so long as you don’t become their snack.",
+      "names": [
+        "Amara",
+        "Wulf",
+        "Mireille",
+        "Soren",
+        "Freki",
+        "Aster",
+        "Gerrik",
+        "Boreas",
+        "Veda",
+        "Matheus"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Leather Whip (d6)",
+        "Soporific Darts (STR save or fall asleep, 6 uses)",
+        "Lure",
+        "Rope (25ft)"
+      ],
+      "tables": [
+        {
+          "title": "What creature is your specialty?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Arachnids"
+            },
+            {
+              "roll": 2,
+              "text": "Felines"
+            },
+            {
+              "roll": 3,
+              "text": "Canines"
+            },
+            {
+              "roll": 4,
+              "text": "Birds"
+            },
+            {
+              "roll": 5,
+              "text": "Rodents"
+            },
+            {
+              "roll": 6,
+              "text": "Serpents"
+            }
+          ]
+        },
+        {
+          "title": "What have you learned from the creatures of the wild?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "That there is far more to the world than meets the eye. With quiet concentration, you can borrow the senses of a nearby creature of your specialty."
+            },
+            {
+              "roll": 2,
+              "text": "That the behavior of beasts is a language in itself. When observing beasts of your specialty you gain insight into weather patterns and impending disasters."
+            },
+            {
+              "roll": 3,
+              "text": "That the pulse of the hunt is a powerful impulse. You have a sense for when predators, even those not of your specialty are near."
+            },
+            {
+              "roll": 4,
+              "text": "That the land is a language unto itself. Your chance of becoming lost in a terrain dominated by the beasts of your specialty is reduced by one step (e.g. 4-in-6 becomes 3-in-6)."
+            },
+            {
+              "roll": 5,
+              "text": "That nature’s symphony can be heard if you attune to its rhythm. When surrounded by creatures of your specialty, they can alert you to approaching danger before it arrives."
+            },
+            {
+              "roll": 6,
+              "text": "That survival is all about adaptability. Once per day, you may take on a simple feature from a creature of your specialty (webbed fingers, night vision, etc.). Add a Fatigue each time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bonekeeper",
+      "slug": "bonekeeper",
+      "flavor": "You are a shepherd to the departed. You listen to the final whispers of the dead as they descend into the cold, unyielding earth. You know that to fully celebrate the gift of life, we must honor its finale as well.",
+      "names": [
+        "Rook",
+        "Ebon",
+        "Moro",
+        "Yew",
+        "Pall",
+        "Leth",
+        "Bea",
+        "Barnaby",
+        "Vesper",
+        "Leder"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Lantern",
+        "Oil Can (6 uses)",
+        "Stake (d6)",
+        "Chains (10ft)"
+      ],
+      "tables": [
+        {
+          "title": "What did you take from the dead?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "A crow-shaped amulet. You can ask a question of the dead but must add a Fatigue each time. They do not always speak truthfully."
+            },
+            {
+              "roll": 2,
+              "text": "A mortal wound from a freed revenant. You were healed, but the disfigurement has made you a pariah. You require neither air nor sustenance but are still subject to pain and death. Trapped between worlds, the dead see you as one of their own."
+            },
+            {
+              "roll": 3,
+              "text": "A Blood Pail (bulky) from a local death-cult. Empty it to raise a servant built from whatever is buried below, with 6 HP, 1 Armor, 13 STR, 11 DEX, 4 WIL, and shard fists (d8+d8). Only one servant can be raised at a time. If destroyed, you permanently lose 1d4 STR. Recharge: Fill with the blood of a dying warrior."
+            },
+            {
+              "roll": 4,
+              "text": "A burial wagon (+6 slots, slow) from your last job. It came with a stubborn old donkey (+4 slots, only +2 slots if pulling wagon)."
+            },
+            {
+              "roll": 5,
+              "text": "The Detect Magic Spellbook, stolen from an ancient library. Your family worked in service to an obscure underworld deity, but you lost your faith. Though exiled, you continue to serve, even as an apostate. Detect Magic: You can see or hear nearby magical auras. Becomes warm to the touch when magic is used nearby."
+            },
+            {
+              "roll": 6,
+              "text": "A plague doctor’s mask, after its owner succumbed to the disease that wiped out everyone you once knew. They should have kept it on."
+            }
+          ]
+        },
+        {
+          "title": "What tool was invaluable in your work?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Manacles"
+            },
+            {
+              "roll": 2,
+              "text": "Sponge"
+            },
+            {
+              "roll": 3,
+              "text": "Pulley"
+            },
+            {
+              "roll": 4,
+              "text": "Incense"
+            },
+            {
+              "roll": 5,
+              "text": "Crowbar"
+            },
+            {
+              "roll": 6,
+              "text": "Repellent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cutpurse",
+      "slug": "cutpurse",
+      "flavor": "You live in the grey space between those who have power and those who don’t. You find opportunity where others see only chaos. With nimble fingers, you unburden both the richest merchant and the lowliest guard.",
+      "names": [
+        "Arlo",
+        "Lyra",
+        "Eamon",
+        "Salina",
+        "Elara",
+        "Freya",
+        "Bull",
+        "Sparrow",
+        "Ivy",
+        "Silas"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Twin Daggers (d6+d6, bulky)",
+        "Padded Leather (1 Armor)",
+        "Lockpicks",
+        "Black Outfit (petty)"
+      ],
+      "tables": [
+        {
+          "title": "What was your last big job?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "A noble’s summer home. The place was full of fancy wine (+20gp) but not much else. Take Fence Cutters."
+            },
+            {
+              "roll": 2,
+              "text": "A bank. (You were caught.) You bear a brand only visible by firelight, and anyone who sees the mark can ask you for a beer. Take Retractable Wires."
+            },
+            {
+              "roll": 3,
+              "text": "A guild warehouse. Take a Ladder (bulky, 10ft) and Blinding Powder (1 use)."
+            },
+            {
+              "roll": 4,
+              "text": "Moneylender. Someone beat you to the job but left behind a Scroll of Arcane Eye (petty). Arcane Eye: You can see through a magical floating eyeball that flies around at your command."
+            },
+            {
+              "roll": 5,
+              "text": "Constable’s quarters. You escaped but left some friends behind. Take Strong Silk Rope (30ft) and a queasy feeling."
+            },
+            {
+              "roll": 6,
+              "text": "A university. You were seen but not pursued. You still don’t know why. Take Smoke Pellets (3 uses)."
+            }
+          ]
+        },
+        {
+          "title": "What helps you steal?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Catring"
+            },
+            {
+              "roll": 2,
+              "text": "Gildfinger"
+            },
+            {
+              "roll": 3,
+              "text": "Glimpse Glass"
+            },
+            {
+              "roll": 4,
+              "text": "Sweetwhistle"
+            },
+            {
+              "roll": 5,
+              "text": "Vagrant’s Veil"
+            },
+            {
+              "roll": 6,
+              "text": "Reverse Teetotum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fieldwarden",
+      "slug": "fieldwarden",
+      "flavor": "Protectors of the harvest, defense against pests, thieves, and beasts. A position of great honor, while it lasts: many guardians do not live out their natural lives. Roll a second time on the Bonds table.",
+      "names": [
+        "Seed",
+        "Thresh",
+        "Dibber",
+        "Sow",
+        "Stalk",
+        "Harrow",
+        "Cobb",
+        "Flax",
+        "Briar",
+        "Rye"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Brigandine (1 Armor, bulky)",
+        "Sling (d6)",
+        "Hand Axe (d6)",
+        "Repellent (pick the type, 3 uses)"
+      ],
+      "tables": [
+        {
+          "title": "What got the better of you?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "A voracious swarm of pests that swallowed crops and animals alike. With nothing to defend, you left. Take Gale Seed Extract (3 uses). Ingesting it lets you sprint with a speed four times your regular rate. Afterward you add two Fatigue."
+            },
+            {
+              "roll": 2,
+              "text": "A crop spirit, angered by a poor tithing. The fires consumed nearly everything, and afterward you were able to gather a pouch of Fireseeds (d8, blast, 4 uses)."
+            },
+            {
+              "roll": 3,
+              "text": "An antlered, toothy demon that nearly ended you. Take a blood-stained Bone Knife (d6). On Critical Damage, its next attack becomes enhanced from contact with blood."
+            },
+            {
+              "roll": 4,
+              "text": "The Withering, a type of stem rot from the Roots. Take a Diseased Crop (6 uses) that quickly decays any plant it touches."
+            },
+            {
+              "roll": 5,
+              "text": "Wolves, or so you thought. You are now a Werewolf [8 HP, 15 STR, 14 DEX, claws (d6+d6), bite (d8)]. Your WIL remains the same. You can turn at will (once per day) but must make a WIL save to revert. Anyone left alive from your attacks must make a WIL save to avoid infection."
+            },
+            {
+              "roll": 6,
+              "text": "Crop thieves. Not all of them survived, but you were outnumbered. Start with +d4 HP and a Cusped Falchion (d8)."
+            }
+          ]
+        },
+        {
+          "title": "What tool saved your life?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Bloodvine Whip"
+            },
+            {
+              "roll": 2,
+              "text": "Clatter Keeper"
+            },
+            {
+              "roll": 3,
+              "text": "Sun Stick"
+            },
+            {
+              "roll": 4,
+              "text": "Root Tether"
+            },
+            {
+              "roll": 5,
+              "text": "Greenwhistle"
+            },
+            {
+              "roll": 6,
+              "text": "Everbloom Band"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fletchwind",
+      "slug": "fletchwind",
+      "flavor": "You strike from afar, but that does not make you a coward. You are a musician, the song of your bowstring naught but a warning, singing the silent promise of a quick death.",
+      "names": [
+        "Flint",
+        "Feather",
+        "Crier",
+        "Thunder",
+        "Falcon",
+        "Pluck",
+        "Needle",
+        "Warsong",
+        "Hawk",
+        "Cai"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Bow (see table)",
+        "Serrated Knife (d6)",
+        "Boiled Leather (1 Armor)",
+        "Heartroot Salve (restores 1d4 STR, 1 use)"
+      ],
+      "tables": [
+        {
+          "title": "How did you earn your bow?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "War. If you are first to attack, your bow gains the blast property for the first round."
+            },
+            {
+              "roll": 2,
+              "text": "Falconry. You keep a falcon [3 hp, 5 STR, 16 DEX, 4 WIL, claws (d6+d6), bite (d8)]. It only eats live game."
+            },
+            {
+              "roll": 3,
+              "text": "Hunting. When taking the Supply action, your ability to secure Rations increases by one step (e.g. 1d4 becomes 1d6)."
+            },
+            {
+              "roll": 4,
+              "text": "Tournaments. Attacks with your bow are enhanced if the target is immobile."
+            },
+            {
+              "roll": 5,
+              "text": "Training. If you are the first to attack, melee attacks against you are impaired until you take STR damage."
+            },
+            {
+              "roll": 6,
+              "text": "Scouting. When taking the Travel action, your presence decreases the chance of getting lost by one step (e.g. 4-in-6 becomes 3-in-6)."
+            }
+          ]
+        },
+        {
+          "title": "What kind of wood is your bow made from?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Western Yew (d6, bulky). Can be wielded as a blunt weapon (d6). Noisy."
+            },
+            {
+              "roll": 2,
+              "text": "Sessile Oak (d8, bulky). Slams into targets. On Critical Damage something is torn off."
+            },
+            {
+              "roll": 3,
+              "text": "Stone Pine (d6, bulky). Produces one use of Sticky Sap per day. The sap is highly explosive."
+            },
+            {
+              "roll": 4,
+              "text": "White Ash (d6, bulky). Can be used in place of a shield in melee combat (+1 Armor)."
+            },
+            {
+              "roll": 5,
+              "text": "Striped Bamboo (d6). Collapsible, it only requires one slot (but still requires both hands)."
+            },
+            {
+              "roll": 6,
+              "text": "Wych Elm (d6, bulky). Protects the bearer from poisons and toxins, so long as they are holding it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Foundling",
+      "slug": "foundling",
+      "flavor": "An odd birthmark, a strange smell: somehow, the touch of elsewhere still lingers. Wherever you are, you have trouble fitting in. Roll on the Omens table (even if you’re not the youngest player), but keep the results private for now.",
+      "names": [
+        "Faunus",
+        "Snowdrop",
+        "Wisp",
+        "Silverdew",
+        "Brim",
+        "Solstice",
+        "Steeleye",
+        "Artea",
+        "Gossamer",
+        "Hazel"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Salt Pouch",
+        "Heirloom Amulet (petty, glows in the presence of magic)",
+        "Sling (d6)",
+        "Dagger (d6)"
+      ],
+      "tables": [
+        {
+          "title": "Who took you in?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "An old hunter. You were both quite happy, until it all ended. Take a Weathered Longbow (d8, bulky) and a Leather Jerkin (1 Armor)."
+            },
+            {
+              "roll": 2,
+              "text": "A wizened apothecary, who taught you the healing arts but maintained a clinical detachment. Take a Healing Unguent (restores d4 STR, 1 use)."
+            },
+            {
+              "roll": 3,
+              "text": "A druid, who taught you the language of trees. When it came time to , you took with you only a Gnarled Staff (d8) and left a promise that one day you would return."
+            },
+            {
+              "roll": 4,
+              "text": "A gruff blacksmith from a sleepy river town. You were always kept at arm’s length. Now the forge is cold, and you’ve moved on. Take a Smith’s Apron (petty) and a set of Oft-mended Chain Mail (2 Armor, bulky)."
+            },
+            {
+              "roll": 5,
+              "text": "A troupe of traveling entertainers. For a time, they were like family to you. One day you woke up and they were gone with no explanation. Take a Storybook, a Dagger (d6), and some burning questions."
+            },
+            {
+              "roll": 6,
+              "text": "The monks of a secluded forest monastery. When their rules became too strict, and you snuck away. Take a Monk’s Habit (warm, petty) and a Spellbook of Control Plants. Control Plants: Nearby plants and trees obey you and gain the ability to move at a slow pace. Leaves grow along the spine, and it smells faintly of decay."
+            }
+          ]
+        },
+        {
+          "title": "What keeps bad tidings at bay?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Pipeweed"
+            },
+            {
+              "roll": 2,
+              "text": "Stink Jar"
+            },
+            {
+              "roll": 3,
+              "text": "Ivy Worm"
+            },
+            {
+              "roll": 4,
+              "text": "Dream Stone"
+            },
+            {
+              "roll": 5,
+              "text": "Drowning Rod"
+            },
+            {
+              "roll": 6,
+              "text": "Rabbit’s Foot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fungal Forager",
+      "slug": "fungal-forager",
+      "flavor": "You follow the whisperings of the deep earth, the rhythmic pulse of the mycelium forest that grows beneath the surface. The dark holds no terror for you. Also, you really love mushrooms.",
+      "names": [
+        "Unther",
+        "Woozy",
+        "Hilda",
+        "Current",
+        "Leif",
+        "Ratan",
+        "Mourella",
+        "Lal",
+        "Per",
+        "Madrigal"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Sharpened Trowel (d6)",
+        "Candle Helmet (+1 Armor, dim, 6 uses)",
+        "Rope (25ft)",
+        "Metal Pail"
+      ],
+      "tables": [
+        {
+          "title": "What strange fungus did you discover?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Shrieking Trumpet. When exposed to light, it screams so loudly that all nearby attacks (including your own) are impaired. 2 uses."
+            },
+            {
+              "roll": 2,
+              "text": "Torch Fungus. When crushed, it creates a cold blue light for a short while. 2 uses."
+            },
+            {
+              "roll": 3,
+              "text": "Murderous Truffle. Pungent, highly toxic, and very rare (worth 50gp to assassins). Illegal pretty much everywhere. 1 use."
+            },
+            {
+              "roll": 4,
+              "text": "Hellcap. Exposure to its aroma causes intense nausea and vomiting. Either way, it clears the room. Bottled (1 use)."
+            },
+            {
+              "roll": 5,
+              "text": "Sproutcup. Ingest to shrink down to the size of a mouse. (Your belongings stay the same size.) You return to normal size within the hour, often in fits and starts. 1 use."
+            },
+            {
+              "roll": 6,
+              "text": "Rootflower. A white fungus found only on corpses deep underground. Ingest to restore d6 WIL. You will dream of the dead and their stories. 1 use."
+            }
+          ]
+        },
+        {
+          "title": "What keeps you sane, even in utter darkness?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Glowsnail"
+            },
+            {
+              "roll": 2,
+              "text": "Silk Moth Shawl"
+            },
+            {
+              "roll": 3,
+              "text": "Milkflower"
+            },
+            {
+              "roll": 4,
+              "text": "Luxcompass"
+            },
+            {
+              "roll": 5,
+              "text": "Sloth-Tarp"
+            },
+            {
+              "roll": 6,
+              "text": "Miner’s Grease"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Greenwise",
+      "slug": "greenwise",
+      "flavor": "You delve deep into the Wood, prying its secrets from between rough boughs and whispering leaves. To this verdant kingdom, you are no mere scholar but its confidant as well.",
+      "names": [
+        "Gunther",
+        "Moss",
+        "Fern",
+        "Lichen",
+        "Root",
+        "Willow",
+        "Sage",
+        "Yarrow",
+        "Rowan",
+        "Ash"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Iron Pot",
+        "Root Knife (d6)",
+        "Healing Salve (restore 1d4 STR, 1 use)",
+        "Twine Bauble (petty, Ward once per day) Ward: A silver circle 50ft across appears on the ground. Choose one species that cannot cross it."
+      ],
+      "tables": [
+        {
+          "title": "How has the Wood failed you ?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "An ill-tempered forest spirit cursed you for stealing, marking you as an enemy of their kind. Take a Bezoar Stone. Ingesting it cures any poison (1 use, unless retrieved)."
+            },
+            {
+              "roll": 2,
+              "text": "A close friend disappeared into the forest. Now you see their face in any tea you brew. Take a Soporific Concoction (3 uses)."
+            },
+            {
+              "roll": 3,
+              "text": "You were poisoned, losing your sense of taste and smell. You can now withstand noxious fumes and always carry Antitoxin (2 uses)."
+            },
+            {
+              "roll": 4,
+              "text": "Your radical experiments turned your skin green, and you now gain nourishment as a plant. You don’t need Rations, but a day without sufficient sunlight and water leaves you deprived."
+            },
+            {
+              "roll": 5,
+              "text": "Your impressive corpseflower won a local contest then promptly killed a judge. You fled, but not without the Prize Money (100gp) and a warrant for your arrest."
+            },
+            {
+              "roll": 6,
+              "text": "You created a restorative tincture that also causes accidental infertility. Take a Healing Potion that completely restores STR. Only you know of its unintended side-effects."
+            }
+          ]
+        },
+        {
+          "title": "What keeps you safe while in the Wood?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Amadou"
+            },
+            {
+              "roll": 2,
+              "text": "Delphinium"
+            },
+            {
+              "roll": 3,
+              "text": "Tacky Stalk"
+            },
+            {
+              "roll": 4,
+              "text": "Wisp Lantern"
+            },
+            {
+              "roll": 5,
+              "text": "Seed Bomb"
+            },
+            {
+              "roll": 6,
+              "text": "Briarvine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Half-Witch",
+      "slug": "half-witch",
+      "flavor": "Born of both the mortal world and the unseen, you are an enigma to some and feared by many. Yours is the tale of what happens when two worlds collide.",
+      "names": [
+        "Solena",
+        "Veles",
+        "Bryn",
+        "Sabine",
+        "Razvan",
+        "Rowena",
+        "Galen",
+        "Nyx",
+        "Vex",
+        "Iwan"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Spellbook (Thicket: A thicket of trees and dense brush up to 50ft wide suddenly sprouts up. Wrapped in vines that must be destroyed again with each use.)",
+        "Iron Dagger (d6)",
+        "Herbs Pouch (restore 1 STR, 3 uses)",
+        "Ghillie Suit"
+      ],
+      "tables": [
+        {
+          "title": "What did you bring back from the Unseelie Court?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "A Black Rose Fiddle (bulky). Its music causes intense sadness and immobility in nearby mortals. (Others are merely fascinated.) You don’t know how to play."
+            },
+            {
+              "roll": 2,
+              "text": "Paper legs. You are extremely light, and can fall a few stories without getting hurt. Try to avoid tearing them or getting them wet."
+            },
+            {
+              "roll": 3,
+              "text": "A Living Nightmare that dwells within you but manifests whenever you are in danger. It has your same Attributes and HP and attacks with claws (d8+d8). It disappears on Critical Damage (take 1d4 WIL damage), re-appearing again on the next full moon."
+            },
+            {
+              "roll": 4,
+              "text": "A Raven Familiar [8 HP, 3 STR, 11 DEX, 13 WIL, beak, (d6)]. It speaks as an intelligent being and is entirely devoted to you."
+            },
+            {
+              "roll": 5,
+              "text": "A Briar Thorn. It can pierce any organic material (quite painfully) but when removed leaves no trace of the intrusion."
+            },
+            {
+              "roll": 6,
+              "text": "A Fae creature’s True Name. Use it to summon its owner for an act of great service, but only once. It could also fetch a hefty price, from the right buyer."
+            }
+          ]
+        },
+        {
+          "title": "What concoction do you carry, and what rare ingredients did you gather to make it?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Rebirth Ash"
+            },
+            {
+              "roll": 2,
+              "text": "Glamour Feather"
+            },
+            {
+              "roll": 3,
+              "text": "Hawthorn Seed"
+            },
+            {
+              "roll": 4,
+              "text": "Stonetree Sap"
+            },
+            {
+              "roll": 5,
+              "text": "Nightdust Powder"
+            },
+            {
+              "roll": 6,
+              "text": "Hex Stone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hexenbane",
+      "slug": "hexenbane",
+      "flavor": "You are a mere digit on the unerring hand of justice. You go where others fear to tread, unyielding and unbroken.",
+      "names": [
+        "Percival",
+        "Felix",
+        "Isolde",
+        "Wolfram",
+        "Aldric",
+        "Eira",
+        "Oswin",
+        "Ivor",
+        "Brunhilda",
+        "Beatrix"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Vestments of the Order (petty)",
+        "Blessed Tinctures",
+        "Silver Knife (d6)",
+        "Crossbow (d8, bulky)"
+      ],
+      "tables": [
+        {
+          "title": "To which order do you belong?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Order of the Crossroads. Take a Pocket Leyfinder. It points to nearby ley lines and other sources of arcane power. If you lose it, the punishment is death."
+            },
+            {
+              "roll": 2,
+              "text": "Order of the Bleeding Star. Take a Star-Iron Mace (d8). It shines faintly in darkness and becomes very hot in the presence of witchcraft."
+            },
+            {
+              "roll": 3,
+              "text": "Order of the Glass Sigil. Take a short sword (d8) and chainmail (2 Armor, bulky). You have contacts in most towns (the more rural, the better) willing to provide aid, food, or even weapons."
+            },
+            {
+              "roll": 4,
+              "text": "Order of the Blank Eye. Take a Voidglass Shard. Peer through it to see invisible marks, creatures, and other magical effects. Lose the use of your eye for an hour afterwards (you are deprived)."
+            },
+            {
+              "roll": 5,
+              "text": "Order of Canaas. Once per day, you can change into a wolf. Take a Quicksilver Chain. Without it, you are unable to shift back."
+            },
+            {
+              "roll": 6,
+              "text": "Order of the Silent Veil. Take a Quell Stone (2 uses) wrapped in burlap. Extinguishes any nearby flames once exposed to air."
+            }
+          ]
+        },
+        {
+          "title": "What was your vow?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Honesty. Choose a weapon type (blunt, blade, etc). Attacks against you of this type are impaired. If your vow is broken, you lose d4 WIL."
+            },
+            {
+              "roll": 2,
+              "text": "Poverty. You carry the Disassemble Spellbook. Only you can use it. If your vow is broken, it explodes (d12 STR damage). Disassemble: Any of your body parts may be detached and reattached at will, without causing pain or damage. You can still control them. Regenerates any torn or defaced pages."
+            },
+            {
+              "roll": 3,
+              "text": "Selflessness. You are immune to mind-altering magical effects, such as charm, hatred, frenzy, and so on. If you break this vow, you lose d6 WIL."
+            },
+            {
+              "roll": 4,
+              "text": "Mercy. Choose a weapon type (blunt, blade, etc). Attacks with this weapon are enhanced. If your vow is broken, you can never use that weapon type again."
+            },
+            {
+              "roll": 5,
+              "text": "Charity. Once per day you can shrug off a Fatigue. If your vow is ever broken, you permanently lose one inventory slot."
+            },
+            {
+              "roll": 6,
+              "text": "Valor. The first time you inflict Critical Damage, you receive +d4 HP, returning to the previous limit at the end of combat. If your vow is broken, you die."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jongleur",
+      "slug": "jongleur",
+      "flavor": "What inspires the soul more than song, words, and spectacle? Why practice for years to master the arcane when you’ve already got real magic inside?",
+      "names": [
+        "Jax",
+        "Selene",
+        "Baladria",
+        "Ada",
+        "Mort",
+        "Saylor",
+        "Tripp",
+        "Lantos",
+        "Echo",
+        "Jubilo"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Costume",
+        "Simple Instrument (Pipes, Lute, etc.)",
+        "Lucky Jerkin (+1 Armor)",
+        "Sling (d6)"
+      ],
+      "tables": [
+        {
+          "title": "What happened at your final performance?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Despite your training in the deadly arts, an actor died and you were blamed. Take a light-weight Rapier (d6) and a false identity."
+            },
+            {
+              "roll": 2,
+              "text": "The crowd loved your catchy tune about a noble and his romantic failings. The noble in question, not so much. Take the Read Mind Spellbook and a warrant for your arrest. Read Mind: You can hear the surface thoughts of nearby creatures. Long-term possession can cause the reader to mistake the thoughts of others as their own."
+            },
+            {
+              "roll": 3,
+              "text": "Your debut composition reduced the audience to a gibbering mess, murmuring of bright creatures descending from the night sky. Later you noticed that the notes resembled stellar constellations. Take a Book On Astronomy, and a lot of questions."
+            },
+            {
+              "roll": 4,
+              "text": "You mocked a forgotten trickster god and were cursed for it. You speak only in perfect rhyme. Ironically, this has only made you more popular among your peers. Take a Thesaurus (20gp). Without it, you are deprived."
+            },
+            {
+              "roll": 5,
+              "text": "You were scarred in an on-stage accident. The crowd cheered, thinking it was part of the act. Take well-worn Stage Mail (1 Armor), a memorable scar, and a fear of applause."
+            },
+            {
+              "roll": 6,
+              "text": "Your respectable puppeteering skills were matched only by your mimicry. You were so good you were branded a witch (literally) and banished. Take an Uncanny Hand-Puppet and a Rabbit Skull (petty) that protects against charms."
+            }
+          ]
+        },
+        {
+          "title": "What trinket were you unable to leave behind?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "False Cuffs"
+            },
+            {
+              "roll": 2,
+              "text": "Pocket Theatre"
+            },
+            {
+              "roll": 3,
+              "text": "Ghost Violin"
+            },
+            {
+              "roll": 4,
+              "text": "Tragic Tales"
+            },
+            {
+              "roll": 5,
+              "text": "Mythos Mask"
+            },
+            {
+              "roll": 6,
+              "text": "Rebreak Glass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kettlewright",
+      "slug": "kettlewright",
+      "flavor": "You are known by the smell of molten metal and the jingle of tin. You are no mere merchant but an artisan of fire and metal.",
+      "names": [
+        "Fergus",
+        "Eon",
+        "Bram",
+        "Idris",
+        "Hester",
+        "Darragh",
+        "Seren",
+        "Rónán",
+        "Berek",
+        "Lorenz"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Pincers",
+        "Roll of Tin",
+        "Gloves (petty)",
+        "Hammer (d6)"
+      ],
+      "tables": [
+        {
+          "title": "What is your trade?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "You build small contraptions for local guilds (and don’t ask too many questions). Take an extra 40gp and a wanted poster with your face on it. Given time and materials, you can open almost any door or vault."
+            },
+            {
+              "roll": 2,
+              "text": "You deal in home goods and tools, hawking your wares to townspeople across the lands. Take 20gp worth of items from the gear table. You are fluent in the Traveler’s Cant."
+            },
+            {
+              "roll": 3,
+              "text": "You were a military smelter, before peace destroyed your livelihood. Take a smelting hammer (d10, bulky) and a tin helm (+1 Armor). Given time and adequate materials, you can repair armor."
+            },
+            {
+              "roll": 4,
+              "text": "You sell rare and quality items to monasteries and nobles alike. Take a Spyglass, a Necklace (petty) worth 20gp, and a Scroll of Mirrorwalk (petty)."
+            },
+            {
+              "roll": 5,
+              "text": "You offer protection as a service, quietly watching for threats as money exchanges hands. You start with +d4 HP, and carry a Long Sword (d10, bulky) and a Gambeson (+1 Armor)."
+            },
+            {
+              "roll": 6,
+              "text": "You scavenge raw tin and iron from battlefields, pulling teeth from still-twitching corpses. Start with a young Donkey (+4 slots, slow), a Crossbow (d8 damage, bulky), and a Saw (d6)."
+            }
+          ]
+        },
+        {
+          "title": "What never fails to get you out of trouble?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Fire Eggs"
+            },
+            {
+              "roll": 2,
+              "text": "Black Tar"
+            },
+            {
+              "roll": 3,
+              "text": "Spiked Boots"
+            },
+            {
+              "roll": 4,
+              "text": "Tinker’s Paste"
+            },
+            {
+              "roll": 5,
+              "text": "Fireworks"
+            },
+            {
+              "roll": 6,
+              "text": "Carrion Cat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marchguard",
+      "slug": "marchguard",
+      "flavor": "Bound by blood Oath to patrol the border and protect the realm. Once sworn, the Oath cannot be broken. The Guard always finds their own.",
+      "names": [
+        "Gann",
+        "Light",
+        "Saoirse",
+        "Frost",
+        "Thorn",
+        "Reed",
+        "Dirk",
+        "Ragnar",
+        "Brie",
+        "Aasim"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Lantern",
+        "Oil Can (6 uses)",
+        "Long Sword (d10, bulky)",
+        "Boiled Leather (1 Armor)"
+      ],
+      "tables": [
+        {
+          "title": "Why did you take the Oath?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Your family has a long tradition of serving, and you were trained from an early age on how to survive in the wild. When taking the Supply action, your yield increases by one step (e.g. 1d4 > 1d6)."
+            },
+            {
+              "roll": 2,
+              "text": "As a convict, the Oath was simply a means of avoiding punishment. Take a set of Lockpicks and the Key (petty) to a safehouse."
+            },
+            {
+              "roll": 3,
+              "text": "Noble-born, you joined to escape family trouble. Take a Goosefelt Tarp (fits two) that you stole before leaving home."
+            },
+            {
+              "roll": 4,
+              "text": "When your family lost everything, you took the Oath to avoid becoming a burden. Take extra Rations (3 uses) and a brace of Throwing Knives (d6)."
+            },
+            {
+              "roll": 5,
+              "text": "Your life was saved by a member of the Marchguard, and you were inspired to join their ranks. Take a Snare Trap and a Sketchbook filled with detailed drawings."
+            },
+            {
+              "roll": 6,
+              "text": "You were in a dark place and decided that your life needed a little direction. You’re still not so sure it was the right choice. Take an Oilskin Coat and Mapping Paper."
+            }
+          ]
+        },
+        {
+          "title": "What do you carry as proof of your Oath?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Impressive Pin"
+            },
+            {
+              "roll": 2,
+              "text": "Oath Compass"
+            },
+            {
+              "roll": 3,
+              "text": "Pullstones"
+            },
+            {
+              "roll": 4,
+              "text": "Fireflask"
+            },
+            {
+              "roll": 5,
+              "text": "Pain Band"
+            },
+            {
+              "roll": 6,
+              "text": "Poacher’s Woe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mountebank",
+      "slug": "mountebank",
+      "flavor": "Wits are your sharpest weapon, a facade your strongest shield. But when you do lose, you lose badly.",
+      "names": [
+        "Ambrose",
+        "Lucius",
+        "Beauregard",
+        "Cornelius",
+        "Aria",
+        "Toph",
+        "Indigo",
+        "Delphine",
+        "Solene",
+        "Noa"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Cart (+4 slots, bulky when pulled)",
+        "Trick Playing Cards",
+        "Fancy Hat (petty)",
+        "Cane Sword (d6)"
+      ],
+      "tables": [
+        {
+          "title": "How was your fraud exposed?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Your “patients” kept reporting miraculous recoveries, despite your lack of training. Start with Bandages (3 uses) and a knack for healing."
+            },
+            {
+              "roll": 2,
+              "text": "After seducing a wealthy patron, their family hired a criminal gang to retrieve you. You got away and need to lay low. Start with Beauty Cream, 2 uses. Apply to appear irresistibly beautiful for the next 12 hours."
+            },
+            {
+              "roll": 3,
+              "text": "You were a peddler of fake prophesies, but when one turned out to be true, it drew unwanted attention. Roll on the Omens table, but keep the result to yourself. Start with a concealable Knife (d6, petty)."
+            },
+            {
+              "roll": 4,
+              "text": "Your latest stunt destroyed a priceless artifact and injured a dozen bystanders. Start with a Captain’s Uniform (petty), a Ceremonial Sword (harmless, 60gp), and a Bouquet of Flowers."
+            },
+            {
+              "roll": 5,
+              "text": "You were cursed by a hedgewitch for fooling some innocent village folk. Magic acts unpredictably in your hands (WIL save to avoid disaster). If you are the target of magic, the same applies to its wielder."
+            },
+            {
+              "roll": 6,
+              "text": "Your “seances” with the dead were in actuality a ruse involving a cleverly hidden spellbook of Auditory Illusion. Inevitably, a patron discovered your secret. Start with the Spellbook and a bundle of scarves. Auditory Illusion: You create illusory sounds that seem to come from a direction of your choice. Produces random and occasionally inopportune sounds throughout the day."
+            }
+          ]
+        },
+        {
+          "title": "What keepsake could always identify you?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Royal Crest"
+            },
+            {
+              "roll": 2,
+              "text": "Miracle Oil"
+            },
+            {
+              "roll": 3,
+              "text": "Surgeon’s Soap"
+            },
+            {
+              "roll": 4,
+              "text": "Goat Powder"
+            },
+            {
+              "roll": 5,
+              "text": "Cursed Sapphire"
+            },
+            {
+              "roll": 6,
+              "text": "Alchemical Tattoo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Outrider",
+      "slug": "outrider",
+      "flavor": "Your coin comes from escorting caravans, tracking fugitives, or lending your blade to a cause. You’ve been a savior, an executioner, a hero, and even a villain. Yours is not a solitary path, however: you’ll always have your horse.",
+      "names": [
+        "Drake",
+        "Cyra",
+        "Keir",
+        "Darius",
+        "Valen",
+        "Rorik",
+        "Yara",
+        "Rui",
+        "Talon",
+        "Jory"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Long Sword (d10, bulky)",
+        "Leather Jerkin (1 Armor)",
+        "Crossbow (d8, bulky)",
+        "Spyglass"
+      ],
+      "tables": [
+        {
+          "title": "What personal code or principle do you uphold?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "No innocent blood: No bystander will come to harm on your watch. Take a Steadymade Buckler (+1 Armor). While holding this shield, you cannot be moved so long as both feet are planted on firm ground."
+            },
+            {
+              "roll": 2,
+              "text": "Revere the tools of death: Weapons are to be respected and maintained. Take a Wyrmbone Whetstone. Following a half-hour ritual sharpening, attacks with the weapon are enhanced until STR damage is dealt."
+            },
+            {
+              "roll": 3,
+              "text": "To the death, always: You never back down from a fight, no matter the odds. Take a Death-Whistle, 1 charge. Its scream frightens away all who hear it (save WIL or flee). Recharge: Capture the final breath of a dying warrior."
+            },
+            {
+              "roll": 4,
+              "text": "Revere the dead: Death is a journey we all take, and it deserves respect. Take an extra 30gp. You always place two gold pieces on the eyelids of a slain foe. Somehow, you always find the coin."
+            },
+            {
+              "roll": 5,
+              "text": "Loyalty to the work: Your word is your bond. Once you’ve accepted a job, you see it through to the end. Take a weathered Tally Stick. Once a vow is marked onto its face, the stick hardens (d8) until it is complete. The stick will snap in half if the vow is ever broken."
+            },
+            {
+              "roll": 6,
+              "text": "Always pay your debts: You always repay what you owe, whether in coin or in kind. You expect nothing less from all others. Take a Blacked-Out Ledger, then roll a second time on the Bonds table."
+            }
+          ]
+        },
+        {
+          "title": "What breed is your horse?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Heavy Destrier"
+            },
+            {
+              "roll": 2,
+              "text": "Blacklegged Dandy"
+            },
+            {
+              "roll": 3,
+              "text": "Rivertooth"
+            },
+            {
+              "roll": 4,
+              "text": "Piebald Cob"
+            },
+            {
+              "roll": 5,
+              "text": "Linden White"
+            },
+            {
+              "roll": 6,
+              "text": "Stray Fogger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prowler",
+      "slug": "prowler",
+      "flavor": "You are a specter in the night, a fleeting shadow that slips by its prey, unseen. Each kill is a test of cunning and animal determination, a contest between life and death. You know that one day you will lose. You look forward to it.",
+      "names": [
+        "Winda",
+        "Brielle",
+        "Theron",
+        "Chayse",
+        "Nuja",
+        "Dev",
+        "Raven",
+        "Arawan",
+        "Sable",
+        "Baruani"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Tarp",
+        "Boiled Leather (1 Armor)",
+        "Short Sword (d6)",
+        "Spring-Loaded trap (4 STR damage)"
+      ],
+      "tables": [
+        {
+          "title": "What did you last hunt?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "A mock firefly, baiting water carriers with its glowing lure. Take an Alchemical Limb (d8, petty when worn) to replace the one it tore off and an Oil Can (6 uses). The limb is immune to heat and poison. Needs to be oiled daily."
+            },
+            {
+              "roll": 2,
+              "text": "An ice nettle, trapping and draining sheep. You lost your commission when the fungus you introduced killed half the flock. Take a Rime Seed (1 use). It freezes any body of water, no matter the size. Don’t eat it."
+            },
+            {
+              "roll": 3,
+              "text": "A silver marsh crawler that killed someone close to you. You now carry its Tooth (petty) on a chain around your neck as a warning to others of its kind. The tooth hums softly when something is stalking you."
+            },
+            {
+              "roll": 4,
+              "text": "A malicious forest spirit that poisoned a homestead. You saved a Heartseed from the roots of a dying tree. (Plant it to create a new forest.) Also, take Iron Bracers (+1 Armor, bulky)."
+            },
+            {
+              "roll": 5,
+              "text": "A hollow wolf that had been frightening travelers. You took pity on the half-starved creature and nursed it back to health. Now it is loyal to you unto death. It is also a great tunneler. 5 HP, 11 STR, 13 DEX, 8 WIL, teeth (d6)."
+            },
+            {
+              "roll": 6,
+              "text": "An azure warbler. The gametes attract a sizeable profit, if properly extracted. You succeeded but left its nest to the wolves. Take a Paring Knife (d6), an extra 20gp, and a pang of regret."
+            }
+          ]
+        },
+        {
+          "title": "What tool is always in your pack?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Fermented Spirits"
+            },
+            {
+              "roll": 2,
+              "text": "Trail Shaker"
+            },
+            {
+              "roll": 3,
+              "text": "Drowse Balm"
+            },
+            {
+              "roll": 4,
+              "text": "Spike and Cord"
+            },
+            {
+              "roll": 5,
+              "text": "Iron Rattle"
+            },
+            {
+              "roll": 6,
+              "text": "Hardening Glue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rill Runner",
+      "slug": "rill-runner",
+      "flavor": "You sing the stories of rivers and lakes, your talents soothing friends and the elements alike. You’ve seen more than most, but somehow it never seems to be enough.",
+      "names": [
+        "Gale",
+        "Piper",
+        "Brook",
+        "Adair",
+        "Stone",
+        "Dale",
+        "Wren",
+        "Cliff",
+        "Rain",
+        "Robin"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Water Shoes",
+        "Brigandine (1 Armor, bulky)",
+        "Compass",
+        "Dagger (d6)"
+      ],
+      "tables": [
+        {
+          "title": "What songs are you best known for?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "The Tinker’s Two-Step. A humorous fairy tale about a gift-giving traveler. Start with a Reed Whistle. Anyone in earshot must pass a WIL save to perform an act of violence."
+            },
+            {
+              "roll": 2,
+              "text": "The Sylph and Her Lover. A bawdy tale of lost love. Start with a Breeze Knot (3 charges). Creates a strong breeze. Recharge: Tie it to a mast during a storm."
+            },
+            {
+              "roll": 3,
+              "text": "Harper’s Devotion. A sad, short tale about a musician that falls in love with a star. Start with a Celestial Lute. Reveals the constellations above, no matter the weather."
+            },
+            {
+              "roll": 4,
+              "text": "The Reed Fisher. A celebrated song about a massive carp that always seems to get away. Begin with a spool of River Twine (5 uses). Each dip into the river guarantees a catch, though it might not be pleasant."
+            },
+            {
+              "roll": 5,
+              "text": "Song of the Silver Stream. A wordless lullaby that mimics flowing water. Take a Stone Flute that can calm almost any river."
+            },
+            {
+              "roll": 6,
+              "text": "The Thrush and the Meadow. A moody tale told in alternating chorus. Start with a Feather Quill (1 use, petty). A map drawn with this quill reveals the most expedient course between any two points."
+            }
+          ]
+        },
+        {
+          "title": "What pays your way across the land?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Performance"
+            },
+            {
+              "roll": 2,
+              "text": "Bodyguard"
+            },
+            {
+              "roll": 3,
+              "text": "Wares"
+            },
+            {
+              "roll": 4,
+              "text": "Transport"
+            },
+            {
+              "roll": 5,
+              "text": "Sailor’s Friend"
+            },
+            {
+              "roll": 6,
+              "text": "Guide"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scrivener",
+      "slug": "scrivener",
+      "flavor": "You copy ancient texts and illuminate manuscripts, recording the voices of the clever, the great, and the powerful. You will prove that the pen truly is mightier than the sword.",
+      "names": [
+        "Lazlo",
+        "Stilo",
+        "Akshara",
+        "Pisa",
+        "Ji-Yun",
+        "Kalamos",
+        "Hugo",
+        "Shui",
+        "Kalam",
+        "Julius"
+      ],
+      "startingGear": [
+        "3d6 Gold Pieces",
+        "Rations (3 uses)",
+        "Torch (3 uses)",
+        "Quill & Ink",
+        "Blank Book",
+        "Awl (d6)",
+        "Badge (petty)"
+      ],
+      "tables": [
+        {
+          "title": "What work did you keep for yourself?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "The Wild Tongue. A bundle of leather-bound scrolls. A seminal work, cataloging the hidden languages of beasts and how to understand them."
+            },
+            {
+              "roll": 2,
+              "text": "The Silent Symphony. Bound in fluorescent wrap. Very rare, it chronicles the subtle signs used by those employing invisibility magic."
+            },
+            {
+              "roll": 3,
+              "text": "A Treatise on the Abyss. A nondescript black book. An in-depth, largely theoretical text describing the Roots, as well as information about the location of a nearby Gate."
+            },
+            {
+              "roll": 4,
+              "text": "The Star Waltz. A comet-shaped clasp bound in a fine leather cover. Detailed astronomical charts, celestial movements, and stellar festivals. Highly valued (100gp) for its usefulness to travelers."
+            },
+            {
+              "roll": 5,
+              "text": "The Cathedral and the Canopy. Large-leaf binding over vellum. Nominally a children’s storybook, the margins detail information about traveling, eating, and sleeping in the cloud forests."
+            },
+            {
+              "roll": 6,
+              "text": "Garden of Glass. Bound in the cover of another book. A heretical work, it describes the materials, procedures, and optimal locations required to open a Gate."
+            }
+          ]
+        },
+        {
+          "title": "How do you transcribe sensitive information?",
+          "entries": [
+            {
+              "roll": 1,
+              "text": "Fib Ink"
+            },
+            {
+              "roll": 2,
+              "text": "Cipher Stone"
+            },
+            {
+              "roll": 3,
+              "text": "Everquill"
+            },
+            {
+              "roll": 4,
+              "text": "Whisper Vial"
+            },
+            {
+              "roll": 5,
+              "text": "Sanguine Lens"
+            },
+            {
+              "roll": 6,
+              "text": "Echo Leaf"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bonds": [
+    {
+      "roll": 1,
+      "text": "You inherited a Single Gem (500gp, cold and brittle) from a long-dead relative. It arrived with a warning: squander your newfound riches, and a debt long thought forgotten would be called in."
+    },
+    {
+      "roll": 2,
+      "text": "A distant cousin left you a small inheritance. Take 20Gp and a Strange Compass (petty) that always points towards something deep in the Wood."
+    },
+    {
+      "roll": 3,
+      "text": "You carry a Portrait in a locket (petty) of a past love who disappeared into the Wood long ago. Somehow you know that they are still alive."
+    },
+    {
+      "roll": 4,
+      "text": "You found a Tiny Crystal Prism (petty) buried in the dirt. When held up to the light, it shows visions of an unknown location deep within the Wood. Sometimes you feel a presence looking back at you."
+    },
+    {
+      "roll": 5,
+      "text": "You once freed a Naiad from a choked stream. In return, it gave you some Silver Moss (petty). Swallow it near water, and the creature will come, once, to repay its debt."
+    },
+    {
+      "roll": 6,
+      "text": "You inherited an old Journal, bound in bark. Each evening, its pages are filled with the events of the day, crassly written from the journal’s perspective. The writing is crude but accurate."
+    },
+    {
+      "roll": 7,
+      "text": "You protect a long-dormant family secret. Take one half of an Ancient Key (petty). They say that if joined with its twin, it opens a Gate through any door."
+    },
+    {
+      "roll": 8,
+      "text": "You received a Letter (petty) detailing incontrovertible proof that your true parentage is that of Fae nobility. The note also indicates a date and location where you are to meet the letter’s author, deep in the the Wood."
+    },
+    {
+      "roll": 9,
+      "text": "You owe a great debt to a member of the nobility and carry their Signet Ring (petty), which serves as proof of their protection as well as your obligation."
+    },
+    {
+      "roll": 10,
+      "text": "You consumed a Mischievous Spirit that wreaks havoc on your insides, demanding to be taken home, deep in the Wood. It occupies one slot but absorbs one Fatigue each day. It wants you alive (for now)."
+    },
+    {
+      "roll": 11,
+      "text": "A roaming storyteller once spun you tales of great treasure hidden deep in the Wood. You thought it naught but fancy, till they gave you A Rolled-Up Map (petty) marked with an X."
+    },
+    {
+      "roll": 12,
+      "text": "During your travels, you met a dying hunter who asked you to deliver a message to their loved ones. Take a Letter (petty), sealed with tree sap. It is addressed only to the Lord Of Winter."
+    },
+    {
+      "roll": 13,
+      "text": "You found a wounded beast in the forest but chose to ignore it. You see it everywhere now, but only when you’re alone. It looks sad but not angry. You cannot become panicked when acting alone."
+    },
+    {
+      "roll": 14,
+      "text": "You promised a childhood friend that you’d bring them back a rare gift, something unique in all the world. Take a Bracelet (petty) woven from twine and wildflowers."
+    },
+    {
+      "roll": 15,
+      "text": "You crossed a creature of the Wood, and it cursed you with a Stone Heart. With each passing month, the stone grows heavier by one slot. Until your debt is lifted, you cannot truly die."
+    },
+    {
+      "roll": 16,
+      "text": "You carved a Whistle (petty) from an Oak Lord’s branch. Your act did not go unnoticed. You cannot seem to rid yourself of the whistle either."
+    },
+    {
+      "roll": 17,
+      "text": "The Dawn Brigade did your family a service, giving you a dried Blood-Red Flower (petty) as proof. When the flower turns white, it means the favor is owed."
+    },
+    {
+      "roll": 18,
+      "text": "An entertainer once visited your home, filling it with story and song. He left one day without a word, leaving behind only A Miniature Lute. Something rattles inside."
+    },
+    {
+      "roll": 19,
+      "text": "A white crow appeared to you in a dream, holding a twig in its mouth. You awoke the next morning with the Twig (petty) in your hand. You believe it brings you luck. It smells faintly of sulfur."
+    },
+    {
+      "roll": 20,
+      "text": "One of your ancestors wronged a Moss Witch, who cursed their bloodline. Your visage causes mirrors to shatter. You’ve noticed that the shards can sometimes reveal illusions."
+    }
+  ],
+  "omens": [
+    {
+      "roll": 1,
+      "text": "The once rich waters of a life-giving river have turned black and putrid, tainting the land and sickening those who drink from it. A village elder points to some recent desecration as the cause, but most do not heed their words."
+    },
+    {
+      "roll": 2,
+      "text": "It feels like winter has arrived too quickly this year, frost and snows making their appearance much earlier than expected. There is talk of a pattern to the frost found in windows, ponds, and cracks in the ground. It almost looks like a map."
+    },
+    {
+      "roll": 3,
+      "text": "A thick, unnatural fog has begun encroaching upon an ancient and holy grove. It is said to be the work of a great forest spirit, angered by nearby deforestation."
+    },
+    {
+      "roll": 4,
+      "text": "The night sky grows dimmer each evening, as if stars are disappearing one by one. Rumors of hellish creatures capturing farmers and pulling them into the Roots are spreading like wildfire. Village elders believe the two are connected."
+    },
+    {
+      "roll": 5,
+      "text": "The songbirds of the Wood have fallen eerily silent as of late. Hunters claim that a spectral figure has been spotted wandering the forest, gazing longingly at anyone it encounters."
+    },
+    {
+      "roll": 6,
+      "text": "Strange, tear-shaped stones have been found throughout the region, sparking a “gold rush” of sorts for jewelers and thieves alike. The locals believe they are the tears of the earth itself, weeping for a great tragedy yet to come."
+    },
+    {
+      "roll": 7,
+      "text": "Swarming pests gnaw away at the edges of dreams, and farmers speak of a loud buzzing sound emanating from deep within the Wood. They also say that the sound is getting closer."
+    },
+    {
+      "roll": 8,
+      "text": "There is a village known far and wide for its impressive “mother tree,” said to shelter the town’s secrets in its boughs. Recently it has begun bleeding red sap, worrying the elders."
+    },
+    {
+      "roll": 9,
+      "text": "The moon turns a deep crimson, bathing the night in an eerie, blood-red light. Some say it heralds a time of chaos and strife, as the boundaries between the Wood and the mortal realm grow thin."
+    },
+    {
+      "roll": 10,
+      "text": "Strange cracks have appeared in the night sky, revealing a swirling vortex of light and color. Some say that the divide between realms is at its weakest in centuries and fear what may emerge from the other side."
+    },
+    {
+      "roll": 11,
+      "text": "A night-blooming flower once thought extinct is sprouting up throughout the Wood. Its scent is intoxicating but also causes vivid nightmares."
+    },
+    {
+      "roll": 12,
+      "text": "Local livestock have grown increasingly agitated and unmanageable as of late. An old shepherd says it is due to an unsettling howl that emanates from the Wood each full moon."
+    },
+    {
+      "roll": 13,
+      "text": "Swarms of insects are fleeing from the Wood in droves, destroying any wooden structures they come across. The sound of their wings hum a familiar tune as they pass overhead, like a forgotten nursery rhyme."
+    },
+    {
+      "roll": 14,
+      "text": "Hunters talk of a curse that befalls any who kill a beast with a streak of white fur: soon after, they are found dead in their homes. Each day, there are fewer and fewer creatures to hunt."
+    },
+    {
+      "roll": 15,
+      "text": "Folks say that a faint laughter can be heard echoing out of wells all over the city, and that the echoes change to sobs at night."
+    },
+    {
+      "roll": 16,
+      "text": "The constellations have slowly started shifting in the night sky, forming unfamiliar patterns that have stargazers and sages perplexed. Even the animals seem disturbed."
+    },
+    {
+      "roll": 17,
+      "text": "An ancient tree at the heart of a sleepy village has suddenly withered and died, despite showing no signs of disease. After its trunk was cut, a bloody hand was found in its core."
+    },
+    {
+      "roll": 18,
+      "text": "Statues have been weeping blood for months on end, and the wombs of the village have lain barren since. A single child has been the only exception, hidden away by elders overcome with fear and dread."
+    },
+    {
+      "roll": 19,
+      "text": "The local fauna is behaving oddly, displaying heightened aggression or fleeing the area entirely. Hunters talk of a shadowy figure that roams the Wood, calling to the animals."
+    },
+    {
+      "roll": 20,
+      "text": "Border towns have become riotous in recent weeks after multiple claims of a red-robed figure appearing in their children’s dreams, uttering the same warning: A fire is coming, and it will consume everything."
+    }
+  ],
+  "traits": {
+    "physique": [
+      {
+        "roll": 1,
+        "value": "Athletic"
+      },
+      {
+        "roll": 2,
+        "value": "Brawny"
+      },
+      {
+        "roll": 3,
+        "value": "Flabby"
+      },
+      {
+        "roll": 4,
+        "value": "Lanky"
+      },
+      {
+        "roll": 5,
+        "value": "Rugged"
+      },
+      {
+        "roll": 6,
+        "value": "Scrawny"
+      },
+      {
+        "roll": 7,
+        "value": "Short"
+      },
+      {
+        "roll": 8,
+        "value": "Statuesque"
+      },
+      {
+        "roll": 9,
+        "value": "Stout"
+      },
+      {
+        "roll": 10,
+        "value": "Towering"
+      }
+    ],
+    "skin": [
+      {
+        "roll": 1,
+        "value": "Birthmarked"
+      },
+      {
+        "roll": 2,
+        "value": "Marked"
+      },
+      {
+        "roll": 3,
+        "value": "Oily"
+      },
+      {
+        "roll": 4,
+        "value": "Rosy"
+      },
+      {
+        "roll": 5,
+        "value": "Scarred"
+      },
+      {
+        "roll": 6,
+        "value": "Soft"
+      },
+      {
+        "roll": 7,
+        "value": "Tanned"
+      },
+      {
+        "roll": 8,
+        "value": "Tattooed"
+      },
+      {
+        "roll": 9,
+        "value": "Weathered"
+      },
+      {
+        "roll": 10,
+        "value": "Webbed"
+      }
+    ],
+    "hair": [
+      {
+        "roll": 1,
+        "value": "Bald"
+      },
+      {
+        "roll": 2,
+        "value": "Braided"
+      },
+      {
+        "roll": 3,
+        "value": "Curly"
+      },
+      {
+        "roll": 4,
+        "value": "Filthy"
+      },
+      {
+        "roll": 5,
+        "value": "Frizzy"
+      },
+      {
+        "roll": 6,
+        "value": "Long"
+      },
+      {
+        "roll": 7,
+        "value": "Luxurious"
+      },
+      {
+        "roll": 8,
+        "value": "Oily"
+      },
+      {
+        "roll": 9,
+        "value": "Wavy"
+      },
+      {
+        "roll": 10,
+        "value": "Wispy"
+      }
+    ],
+    "face": [
+      {
+        "roll": 1,
+        "value": "Bony"
+      },
+      {
+        "roll": 2,
+        "value": "Broken"
+      },
+      {
+        "roll": 3,
+        "value": "Chiseled"
+      },
+      {
+        "roll": 4,
+        "value": "Elongated"
+      },
+      {
+        "roll": 5,
+        "value": "Pale"
+      },
+      {
+        "roll": 6,
+        "value": "Perfect"
+      },
+      {
+        "roll": 7,
+        "value": "Rakish"
+      },
+      {
+        "roll": 8,
+        "value": "Sharp"
+      },
+      {
+        "roll": 9,
+        "value": "Square"
+      },
+      {
+        "roll": 10,
+        "value": "Sunken"
+      }
+    ],
+    "speech": [
+      {
+        "roll": 1,
+        "value": "Blunt"
+      },
+      {
+        "roll": 2,
+        "value": "Booming"
+      },
+      {
+        "roll": 3,
+        "value": "Cryptic"
+      },
+      {
+        "roll": 4,
+        "value": "Droning"
+      },
+      {
+        "roll": 5,
+        "value": "Formal"
+      },
+      {
+        "roll": 6,
+        "value": "Gravelly"
+      },
+      {
+        "roll": 7,
+        "value": "Precise"
+      },
+      {
+        "roll": 8,
+        "value": "Squeaky"
+      },
+      {
+        "roll": 9,
+        "value": "Stuttering"
+      },
+      {
+        "roll": 10,
+        "value": "Whispery"
+      }
+    ],
+    "clothing": [
+      {
+        "roll": 1,
+        "value": "Antique"
+      },
+      {
+        "roll": 2,
+        "value": "Bloody"
+      },
+      {
+        "roll": 3,
+        "value": "Elegant"
+      },
+      {
+        "roll": 4,
+        "value": "Filthy"
+      },
+      {
+        "roll": 5,
+        "value": "Foreign"
+      },
+      {
+        "roll": 6,
+        "value": "Frayed"
+      },
+      {
+        "roll": 7,
+        "value": "Frumpy"
+      },
+      {
+        "roll": 8,
+        "value": "Livery"
+      },
+      {
+        "roll": 9,
+        "value": "Rancid"
+      },
+      {
+        "roll": 10,
+        "value": "Soiled"
+      }
+    ],
+    "virtue": [
+      {
+        "roll": 1,
+        "value": "Ambitious"
+      },
+      {
+        "roll": 2,
+        "value": "Cautious"
+      },
+      {
+        "roll": 3,
+        "value": "Courageous"
+      },
+      {
+        "roll": 4,
+        "value": "Disciplined"
+      },
+      {
+        "roll": 5,
+        "value": "Gregarious"
+      },
+      {
+        "roll": 6,
+        "value": "Honorable"
+      },
+      {
+        "roll": 7,
+        "value": "Humble"
+      },
+      {
+        "roll": 8,
+        "value": "Merciful"
+      },
+      {
+        "roll": 9,
+        "value": "Serene"
+      },
+      {
+        "roll": 10,
+        "value": "Tolerant"
+      }
+    ],
+    "vice": [
+      {
+        "roll": 1,
+        "value": "Aggressive"
+      },
+      {
+        "roll": 2,
+        "value": "Bitter"
+      },
+      {
+        "roll": 3,
+        "value": "Craven"
+      },
+      {
+        "roll": 4,
+        "value": "Deceitful"
+      },
+      {
+        "roll": 5,
+        "value": "Greedy"
+      },
+      {
+        "roll": 6,
+        "value": "Lazy"
+      },
+      {
+        "roll": 7,
+        "value": "Nervous"
+      },
+      {
+        "roll": 8,
+        "value": "Rude"
+      },
+      {
+        "roll": 9,
+        "value": "Vain"
+      },
+      {
+        "roll": 10,
+        "value": "Vengeful"
+      }
+    ]
+  }
+}

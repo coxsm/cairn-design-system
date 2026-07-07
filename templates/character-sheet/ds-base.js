@@ -2,7 +2,12 @@
 // base at the bound DS folder relative to this file (e.g. '_ds/<folder>' at
 // the project root, '../_ds/<folder>' one level down) — one line to edit.
 (() => {
-  const base = '../..';
+  // Resolve from this script's location, not the HTML page — so sheets in
+  // subfolders (e.g. generated/) still load styles and the component bundle.
+  const script = document.currentScript;
+  const base = script?.src
+    ? new URL('../..', script.src).href.replace(/\/$/, '')
+    : '../..';
   for (const p of ["styles.css"]) {
     const l = document.createElement('link');
     l.rel = 'stylesheet'; l.href = base + '/' + p;

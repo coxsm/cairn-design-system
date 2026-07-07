@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Character Print" description="Single-page, print-ready Cairn character sheet front — no canvas chrome." -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <link rel="stylesheet" href="../../site/print.css">
+</helmet>
+
+<div class="print-sheet">
+
+  <div class="print-main">
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface-panel); border-radius:var(--radius-sm); padding:10px 16px; min-height:48px; flex:0 0 auto;">
+      <div style="font-weight:700; font-size:20px; line-height:1.2; color:var(--ink-150); flex:1; min-width:0;">Name</div>
+      <x-import component-from-global-scope="CairnDesignSystem_b44824.ConditionMark" hint-size="110px,22px"></x-import>
+    </div>
+
+    <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+      <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Hands</div>
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+    </div>
+
+    <div style="position:relative; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); min-height:64px; flex:0 0 auto;">
+      <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Body</div>
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+    </div>
+
+    <div style="position:relative; border:1px solid var(--border-default); border-radius:var(--radius-sm); background:var(--surface-raised); flex:0 0 auto;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px;">
+      <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="position:absolute; top:5px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Backpack</div>
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+      <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; min-height:64px; border-top:1px solid var(--border-hairline);">
+      <div style="position:relative; padding:10px 30px 10px 14px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      <div style="position:relative; padding:10px 30px 10px 14px; border-left:1px solid var(--border-hairline); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:13px; line-height:1.4; min-height:18px; color:var(--text-primary); overflow-wrap:break-word; word-break:break-word;"></div>
+        <span aria-hidden="true" style="position:absolute; top:8px; right:8px; width:12px; height:12px; border:1px solid var(--border-default); border-radius:2px; background:var(--surface-raised);"></span>
+      </div>
+      </div>
+      <span aria-hidden="true" style="position:absolute; left:-3px; top:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+      <span aria-hidden="true" style="position:absolute; left:-3px; bottom:10px; width:5px; height:5px; border-top:1px solid var(--ink-300); border-right:1px solid var(--ink-300); transform:rotate(45deg); background:var(--surface-page);"></span>
+    </div>
+
+    <div style="position:relative; flex:1; min-height:0; border:1px solid var(--border-default); border-radius:var(--radius-md); background:var(--surface-raised);">
+      <div style="position:absolute; top:12px; left:14px; font-size:10px; font-weight:600; letter-spacing:.06em; color:var(--text-muted);">Notes</div>
+      <div style="position:absolute; left:50%; top:44px; bottom:20px; width:1px; background:var(--border-hairline);"></div>
+      <span aria-hidden="true" style="position:absolute; top:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-right:1px solid var(--border-default); border-bottom:1px solid var(--border-default); transform:rotate(45deg);"></span>
+      <span aria-hidden="true" style="position:absolute; bottom:-5px; left:50%; margin-left:-5px; width:9px; height:9px; background:var(--surface-page); border-left:1px solid var(--border-default); border-top:1px solid var(--border-default); transform:rotate(45deg);"></span>
+      <div style="position:absolute; top:40px; left:14px; right:calc(50% + 14px); bottom:16px; font-size:11px; line-height:1.5; color:var(--text-primary); overflow:hidden;">
+        <p class="note-block"><strong>Background:</strong><br>…</p>
+        <p class="note-block"><strong>Traits:</strong><br>…</p>
+      </div>
+      <div style="position:absolute; top:40px; left:calc(50% + 14px); right:14px; bottom:16px; font-size:11px; line-height:1.5; color:var(--text-primary); overflow:hidden;">
+        <p class="note-block"><strong>Trade:</strong><br>…</p>
+        <p class="note-block"><strong>Bond:</strong><br>…</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="print-rail">
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="armor" size="72" hint-size="150px,148px"></x-import>
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="hp" split="true" accent="crimson" size="66" hint-size="150px,142px"></x-import>
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="str" split="true" size="66" hint-size="150px,142px"></x-import>
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="dex" split="true" size="68" hint-size="150px,144px"></x-import>
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="wil" split="true" size="72" hint-size="150px,148px"></x-import>
+    <x-import component-from-global-scope="CairnDesignSystem_b44824.StatBadge" icon="coin" size="66" hint-size="150px,142px"></x-import>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -49,16 +49,35 @@ Every background page follows this shape — use it to know what to expect when 
 - A **Starting Gear** list, e.g. Aurifex's is: 3d6 Gold Pieces, Rations (3 uses), Lantern, Oil Can (6 uses), Needle-knife (d6), Protective Gloves (*petty*).
 - One or two **d6 tables** ("What went horribly wrong?", "What's your latest invention?" for Aurifex) that each award a unique item, ability, or complication with a short narrative beat — roll on the live page, don't guess the entries.
 
+## Random character site
+
+The repo ships a static GitHub Pages site (`site/` → built to `docs/`):
+
+- **Live:** [https://coxsm.github.io/cairn-design-system/](https://coxsm.github.io/cairn-design-system/)
+- **Refresh** rolls a new character in **Filled** and **Max stats** modes; **Blank** stays empty.
+- **Floating panel** (screen only): Filled | Blank | Max stats; notes pages 0–2 for overflow Bond/spell notes.
+- **Print:** Ctrl+P manually — no auto-print. Floating controls are hidden in print/PDF.
+- **Rebuild data:** `node scripts/fetch-character-data.mjs` then `node scripts/build-site.mjs`.
+
+## Print export
+
+Generated characters are **single-page, print-ready PDF exports** — not design-canvas previews.
+
+1. **Always start from** `templates/character-sheet/CharacterPrint.dc.html` (one letter-size front, white background, no chrome). Never duplicate from `CharacterSheet.dc.html` (that file stacks multiple preview pages with gray gutters and section labels).
+2. **Save to** `templates/character-sheet/generated/<Name>-<Background>.dc.html`.
+3. **Keep the print stylesheet** — link `print.css` (grid layout, white `@page`, no chrome). Do not call `window.print()`; the user prints with Ctrl+P.
+4. **After saving**, open via a local static server if paths require it (`npx serve . -p 3456` from repo root).
+
 ## Mapping results onto the sheet
 
-Duplicate `templates/character-sheet/CharacterSheet.dc.html`'s front page and fill in:
+Duplicate `templates/character-sheet/CharacterPrint.dc.html` and fill in:
 
 - **Name bar** → chosen/rolled name.
 - **Hands** (2 slots) → weapon + shield/offhand from Starting Gear.
 - **Body** (2 slots) → armor + a clothing item.
 - **Backpack** (6 slots) → remaining gear, background-table results, and any Fatigue (writes "Fatigue" into a slot with its tickbox filled).
 - **Right rail**: STR / DEX / WIL as `split` StatBadges with `value` = current, `max` = the rolled score (start current = max); HP the same, current = max = rolled 1d6, `accent="crimson"`; Armor = a plain (non-split) value from worn armor; Coin = plain value in gp (convert sp/cp if needed, or add a line to Notes).
-- **Notes** → spellbooks, potions, the background's quirk-table results, and the character's Bond (the sheet has no dedicated Bond/Age field — write them here, or on the alternate blank back page if you want more room).
+- **Notes** → spellbooks, potions, background quirk-table results, Bond, and petty items that don't take slots. Format each section as its own block with a **bold label** and a line break before the body text — use `<p class="note-block"><strong>Label:</strong><br>…</p>` inside each Notes column. Typical left column: Background, Traits. Typical right column: Trade, Escape (or other d6 table results), Bond, Petty. Never run sections together in one paragraph.
 
 The template already ships two worked examples on its canvas — "Filled Character" (every field populated, current = max) and "Pencil (Predetermined Max)" (only the four ability/HP maxes printed, everything else left blank for a physical pencil) — use whichever matches how the sheet will actually be used.
 

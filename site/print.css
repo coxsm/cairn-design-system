@@ -1,0 +1,180 @@
+@page { size: letter portrait; margin: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff !important;
+  height: auto !important;
+}
+
+#dc-root, #dc-root > .sc-host { height: auto !important; }
+
+.print-sheet {
+  position: relative;
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  background: var(--surface-page);
+  padding: 0.2in 0.26in;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 0.22in;
+  box-sizing: border-box;
+  font-family: var(--font-serif);
+}
+
+.print-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 10px;
+}
+
+.print-rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 0;
+  gap: 2px;
+  box-sizing: border-box;
+}
+
+.note-block { margin: 0 0 8px; }
+.note-block:last-child { margin-bottom: 0; }
+
+.print-notes-page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  background: var(--surface-page);
+  padding: 0.24in;
+  box-sizing: border-box;
+  page-break-before: always;
+}
+
+.print-notes-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+}
+
+.print-notes-frame::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  bottom: 24px;
+  width: 1px;
+  background: var(--border-hairline);
+}
+
+.print-notes-notch-top,
+.print-notes-notch-bottom {
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  width: 9px;
+  height: 9px;
+  background: var(--surface-page);
+  transform: rotate(45deg);
+}
+
+.print-notes-notch-top {
+  top: -5px;
+  border-right: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.print-notes-notch-bottom {
+  bottom: -5px;
+  border-left: 1px solid var(--border-default);
+  border-top: 1px solid var(--border-default);
+}
+
+.print-notes-content {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  overflow: hidden;
+  columns: 2;
+  column-gap: 28px;
+}
+
+.floating-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--surface-panel);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-serif);
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.floating-controls label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.floating-controls .segmented {
+  display: flex;
+  gap: 4px;
+}
+
+.floating-controls button {
+  font-family: inherit;
+  font-size: 11px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.floating-controls button.active {
+  background: var(--ink-900);
+  color: var(--paper-000);
+  border-color: var(--ink-900);
+}
+
+.floating-controls button:hover:not(.active) {
+  background: var(--paper-050);
+}
+
+@media print {
+  html, body { background: #fff !important; }
+  .floating-controls { display: none !important; }
+  .print-sheet {
+    margin: 0 !important;
+    width: 8.5in !important;
+    height: 11in !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  .print-notes-page {
+    margin: 0 !important;
+    page-break-before: always;
+  }
+}
